@@ -1,0 +1,1373 @@
+{
+ "schema": "kingmaker.brain-library/1",
+ "repo": "ronininc/kingmaker-brain-library",
+ "updatedAt": "2026-10-15T22:27:46.247Z",
+ "source": "ronininc/Kingmaker sol-ghost 1ce9108",
+ "devices": [
+  {
+   "id": "m1-8gb",
+   "chip": "M1",
+   "ramGb": 8,
+   "bandwidthGBs": 68,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 8,
+   "pack": "8"
+  },
+  {
+   "id": "m1-16gb",
+   "chip": "M1",
+   "ramGb": 16,
+   "bandwidthGBs": 68,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 16,
+   "pack": "16"
+  },
+  {
+   "id": "m1-pro-16gb",
+   "chip": "M1 Pro",
+   "ramGb": 16,
+   "bandwidthGBs": 200,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 16,
+   "pack": "16"
+  },
+  {
+   "id": "m1-pro-32gb",
+   "chip": "M1 Pro",
+   "ramGb": 32,
+   "bandwidthGBs": 200,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m1-max-32gb",
+   "chip": "M1 Max",
+   "ramGb": 32,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m1-max-64gb",
+   "chip": "M1 Max",
+   "ramGb": 64,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m1-ultra-64gb",
+   "chip": "M1 Ultra",
+   "ramGb": 64,
+   "bandwidthGBs": 800,
+   "macs": "Mac Studio, Mac Pro",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m1-ultra-128gb",
+   "chip": "M1 Ultra",
+   "ramGb": 128,
+   "bandwidthGBs": 800,
+   "macs": "Mac Studio, Mac Pro",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m2-8gb",
+   "chip": "M2",
+   "ramGb": 8,
+   "bandwidthGBs": 100,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 8,
+   "pack": "8"
+  },
+  {
+   "id": "m2-16gb",
+   "chip": "M2",
+   "ramGb": 16,
+   "bandwidthGBs": 100,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 16,
+   "pack": "16"
+  },
+  {
+   "id": "m2-24gb",
+   "chip": "M2",
+   "ramGb": 24,
+   "bandwidthGBs": 100,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 24,
+   "pack": "24"
+  },
+  {
+   "id": "m2-pro-16gb",
+   "chip": "M2 Pro",
+   "ramGb": 16,
+   "bandwidthGBs": 200,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 16,
+   "pack": "16"
+  },
+  {
+   "id": "m2-pro-32gb",
+   "chip": "M2 Pro",
+   "ramGb": 32,
+   "bandwidthGBs": 200,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m2-max-32gb",
+   "chip": "M2 Max",
+   "ramGb": 32,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m2-max-64gb",
+   "chip": "M2 Max",
+   "ramGb": 64,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m2-max-96gb",
+   "chip": "M2 Max",
+   "ramGb": 96,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m2-ultra-64gb",
+   "chip": "M2 Ultra",
+   "ramGb": 64,
+   "bandwidthGBs": 800,
+   "macs": "Mac Studio, Mac Pro",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m2-ultra-128gb",
+   "chip": "M2 Ultra",
+   "ramGb": 128,
+   "bandwidthGBs": 800,
+   "macs": "Mac Studio, Mac Pro",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m2-ultra-192gb",
+   "chip": "M2 Ultra",
+   "ramGb": 192,
+   "bandwidthGBs": 800,
+   "macs": "Mac Studio, Mac Pro",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m3-8gb",
+   "chip": "M3",
+   "ramGb": 8,
+   "bandwidthGBs": 100,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 8,
+   "pack": "8"
+  },
+  {
+   "id": "m3-16gb",
+   "chip": "M3",
+   "ramGb": 16,
+   "bandwidthGBs": 100,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 16,
+   "pack": "16"
+  },
+  {
+   "id": "m3-24gb",
+   "chip": "M3",
+   "ramGb": 24,
+   "bandwidthGBs": 100,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 24,
+   "pack": "24"
+  },
+  {
+   "id": "m3-pro-18gb",
+   "chip": "M3 Pro",
+   "ramGb": 18,
+   "bandwidthGBs": 150,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 16,
+   "pack": "16"
+  },
+  {
+   "id": "m3-pro-36gb",
+   "chip": "M3 Pro",
+   "ramGb": 36,
+   "bandwidthGBs": 150,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m3-max-36gb",
+   "chip": "M3 Max",
+   "ramGb": 36,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m3-max-48gb",
+   "chip": "M3 Max",
+   "ramGb": 48,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 48,
+   "pack": "48"
+  },
+  {
+   "id": "m3-max-64gb",
+   "chip": "M3 Max",
+   "ramGb": 64,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m3-max-96gb",
+   "chip": "M3 Max",
+   "ramGb": 96,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m3-max-128gb",
+   "chip": "M3 Max",
+   "ramGb": 128,
+   "bandwidthGBs": 400,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m3-ultra-96gb",
+   "chip": "M3 Ultra",
+   "ramGb": 96,
+   "bandwidthGBs": 819,
+   "macs": "Mac Studio, Mac Pro",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m3-ultra-256gb",
+   "chip": "M3 Ultra",
+   "ramGb": 256,
+   "bandwidthGBs": 819,
+   "macs": "Mac Studio, Mac Pro",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m3-ultra-512gb",
+   "chip": "M3 Ultra",
+   "ramGb": 512,
+   "bandwidthGBs": 819,
+   "macs": "Mac Studio, Mac Pro",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m4-16gb",
+   "chip": "M4",
+   "ramGb": 16,
+   "bandwidthGBs": 120,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 16,
+   "pack": "16"
+  },
+  {
+   "id": "m4-24gb",
+   "chip": "M4",
+   "ramGb": 24,
+   "bandwidthGBs": 120,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 24,
+   "pack": "24"
+  },
+  {
+   "id": "m4-32gb",
+   "chip": "M4",
+   "ramGb": 32,
+   "bandwidthGBs": 120,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m4-pro-24gb",
+   "chip": "M4 Pro",
+   "ramGb": 24,
+   "bandwidthGBs": 273,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 24,
+   "pack": "24"
+  },
+  {
+   "id": "m4-pro-48gb",
+   "chip": "M4 Pro",
+   "ramGb": 48,
+   "bandwidthGBs": 273,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 48,
+   "pack": "48"
+  },
+  {
+   "id": "m4-pro-64gb",
+   "chip": "M4 Pro",
+   "ramGb": 64,
+   "bandwidthGBs": 273,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m4-max-36gb",
+   "chip": "M4 Max",
+   "ramGb": 36,
+   "bandwidthGBs": 546,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m4-max-48gb",
+   "chip": "M4 Max",
+   "ramGb": 48,
+   "bandwidthGBs": 546,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 48,
+   "pack": "48"
+  },
+  {
+   "id": "m4-max-64gb",
+   "chip": "M4 Max",
+   "ramGb": 64,
+   "bandwidthGBs": 546,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m4-max-128gb",
+   "chip": "M4 Max",
+   "ramGb": 128,
+   "bandwidthGBs": 546,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m5-16gb",
+   "chip": "M5",
+   "ramGb": 16,
+   "bandwidthGBs": 153,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 16,
+   "pack": "16"
+  },
+  {
+   "id": "m5-24gb",
+   "chip": "M5",
+   "ramGb": 24,
+   "bandwidthGBs": 153,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 24,
+   "pack": "24"
+  },
+  {
+   "id": "m5-32gb",
+   "chip": "M5",
+   "ramGb": 32,
+   "bandwidthGBs": 153,
+   "macs": "MacBook Air, MacBook Pro 13/14, Mac mini, iMac",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m5-pro-24gb",
+   "chip": "M5 Pro",
+   "ramGb": 24,
+   "bandwidthGBs": 307,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 24,
+   "pack": "24"
+  },
+  {
+   "id": "m5-pro-48gb",
+   "chip": "M5 Pro",
+   "ramGb": 48,
+   "bandwidthGBs": 307,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 48,
+   "pack": "48"
+  },
+  {
+   "id": "m5-pro-64gb",
+   "chip": "M5 Pro",
+   "ramGb": 64,
+   "bandwidthGBs": 307,
+   "macs": "MacBook Pro 14/16, Mac mini",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m5-max-36gb",
+   "chip": "M5 Max",
+   "ramGb": 36,
+   "bandwidthGBs": 614,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 32,
+   "pack": "32"
+  },
+  {
+   "id": "m5-max-48gb",
+   "chip": "M5 Max",
+   "ramGb": 48,
+   "bandwidthGBs": 614,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 48,
+   "pack": "48"
+  },
+  {
+   "id": "m5-max-64gb",
+   "chip": "M5 Max",
+   "ramGb": 64,
+   "bandwidthGBs": 614,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  },
+  {
+   "id": "m5-max-128gb",
+   "chip": "M5 Max",
+   "ramGb": 128,
+   "bandwidthGBs": 614,
+   "macs": "MacBook Pro 14/16, Mac Studio",
+   "class": 64,
+   "pack": "64"
+  }
+ ],
+ "classes": [
+  {
+   "class": 8,
+   "pack": "8 GB · Lean",
+   "label": "8 GB standard (M1/M2/M3 base)",
+   "roles": {
+    "router": "hf.co/mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M",
+    "writer": "hf.co/mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M",
+    "coder": "huihui_ai/qwen2.5-coder-abliterate:1.5b",
+    "vision": "huihui_ai/qwen3.5-abliterated:2b",
+    "reasoning": "hf.co/mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M"
+   },
+   "maxResidentGb": 3.3,
+   "context": 4096,
+   "concurrent": 1,
+   "voice": "off",
+   "pictures": false,
+   "downloadGb": 5.2,
+   "basis": "measured: 8 GB simulation on an M5 Pro (4.8 GiB GPU budget, as the real M3 reports) + the 2026-10-09 real 8 GB M3 run; the real 8 GB M3 bench is pending",
+   "status": "measured",
+   "measuredOn": [
+    "m5-pro-24gb-as-8gb.json"
+   ]
+  },
+  {
+   "class": 16,
+   "pack": "16 GB · Standard",
+   "label": "16 GB (and 18 GB M3 Pro)",
+   "roles": {
+    "router": "huihui_ai/qwen3-abliterated:1.7b",
+    "writer": "huihui_ai/qwen3-abliterated:8b",
+    "coder": "huihui_ai/qwen2.5-coder-abliterate:7b",
+    "vision": "huihui_ai/qwen3.5-abliterated:4b",
+    "reasoning": "huihui_ai/qwen3-abliterated:8b"
+   },
+   "maxResidentGb": 7.5,
+   "context": 8192,
+   "concurrent": 2,
+   "voice": "on",
+   "pictures": false,
+   "downloadGb": 14.1,
+   "basis": "measured on the M5 Pro 24 GB (each model's footprint at 16k, larger than at the 8k this profile uses); not run on a 16 GB Mac",
+   "status": "estimate",
+   "measuredOn": []
+  },
+  {
+   "class": 24,
+   "pack": "24 GB · Full",
+   "label": "24 GB (M2/M3/M4/M5, M4/M5 Pro)",
+   "roles": {
+    "router": "huihui_ai/qwen3-abliterated:1.7b",
+    "writer": "huihui_ai/qwen3-abliterated:8b",
+    "coder": "huihui_ai/qwen2.5-coder-abliterate:7b",
+    "vision": "huihui_ai/qwen3.5-abliterated:4b",
+    "reasoning": "hf.co/mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M"
+   },
+   "maxResidentGb": 11,
+   "context": 16384,
+   "concurrent": 2,
+   "voice": "on",
+   "pictures": true,
+   "downloadGb": 19.7,
+   "basis": "measured on the M5 Pro 24 GB (catalog/bench/m5-pro-24gb.json)",
+   "status": "measured",
+   "measuredOn": [
+    "m5-pro-24gb.json"
+   ]
+  },
+  {
+   "class": 32,
+   "pack": "32 GB · Pro",
+   "label": "32 GB (and 36 GB M3 Pro / M4 Max / M5 Max)",
+   "roles": {
+    "router": "huihui_ai/qwen3-abliterated:1.7b",
+    "writer": "PENDING",
+    "coder": "PENDING",
+    "vision": "PENDING",
+    "reasoning": "huihui_ai/deepseek-r1-abliterated:14b"
+   },
+   "maxResidentGb": 18,
+   "context": 32768,
+   "concurrent": 3,
+   "voice": "on",
+   "pictures": true,
+   "downloadGb": 10.1,
+   "basis": "estimate: 24 GB measurements + measured footprints; not run on a 32 GB Mac",
+   "status": "estimate",
+   "measuredOn": []
+  },
+  {
+   "class": 48,
+   "pack": "48 GB · Studio",
+   "label": "48 GB (M3 Max, M4 Pro/Max, M5 Pro/Max)",
+   "roles": {
+    "router": "huihui_ai/qwen3-abliterated:1.7b",
+    "writer": "PENDING",
+    "coder": "PENDING",
+    "vision": "PENDING",
+    "reasoning": "PENDING"
+   },
+   "maxResidentGb": 26,
+   "context": 32768,
+   "concurrent": 3,
+   "voice": "on",
+   "pictures": true,
+   "downloadGb": 1.1,
+   "basis": "estimate: 24 GB measurements + measured footprints; not run on a 48 GB Mac",
+   "status": "estimate",
+   "measuredOn": []
+  },
+  {
+   "class": 64,
+   "pack": "64 GB · Max",
+   "label": "64 GB and up (Max, Ultra, Studio)",
+   "roles": {
+    "router": "huihui_ai/qwen3-abliterated:1.7b",
+    "writer": "PENDING",
+    "coder": "PENDING",
+    "vision": "PENDING",
+    "reasoning": "PENDING"
+   },
+   "maxResidentGb": 40,
+   "context": 65536,
+   "concurrent": 4,
+   "voice": "on",
+   "pictures": true,
+   "downloadGb": 1.1,
+   "basis": "estimate: 24 GB measurements + measured footprints; not run on a 64 GB Mac",
+   "status": "estimate",
+   "measuredOn": []
+  }
+ ],
+ "models": [
+  {
+   "tag": "hf.co/mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M",
+   "slug": "mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m",
+   "from": "huihui-ai/Huihui-granite-4.1-3b-abliterated",
+   "base": "ibm-granite/granite-4.1-3b",
+   "license": "apache-2.0",
+   "kind": "abliterated",
+   "redistributable": true,
+   "note": null,
+   "picks": [
+    {
+     "class": 8,
+     "role": "router"
+    },
+    {
+     "class": 8,
+     "role": "writer"
+    },
+    {
+     "class": 8,
+     "role": "reasoning"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 97,
+     "loadS": 1.09,
+     "holdsGb": 2.53,
+     "tools": 89,
+     "nativeTools": 78,
+     "route": 92,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M",
+   "slug": "mradermacher-qwen3.8-9b-heretic-uncensored-i1-gguf-i1-q4-k-m",
+   "from": "rohit267/Qwen3.8-9B-heretic-uncensored",
+   "base": "Qwen3.8-9B",
+   "license": null,
+   "kind": "heretic",
+   "redistributable": false,
+   "note": "No licence on its model card: listed and measured, weights not republished.",
+   "picks": [
+    {
+     "class": 24,
+     "role": "reasoning"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 42.5,
+     "loadS": 1.75,
+     "holdsGb": 10.43,
+     "tools": 94,
+     "nativeTools": 83,
+     "route": 100,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/deepseek-r1-abliterated:14b",
+   "slug": "huihui-ai-deepseek-r1-abliterated-14b",
+   "from": "ollama huihui_ai/deepseek-r1-abliterated:14b",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "picks": [
+    {
+     "class": 32,
+     "role": "reasoning"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 28,
+     "loadS": 3.15,
+     "holdsGb": 11.56,
+     "tools": 28,
+     "nativeTools": 28,
+     "route": 0,
+     "write": 100,
+     "fits": false,
+     "why": "holds 11.56 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen2.5-coder-abliterate:1.5b",
+   "slug": "huihui-ai-qwen2.5-coder-abliterate-1.5b",
+   "from": "ollama huihui_ai/qwen2.5-coder-abliterate (the Hugging Face repo is gone)",
+   "base": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+   "license": "apache-2.0",
+   "kind": "abliterated",
+   "redistributable": true,
+   "note": null,
+   "picks": [
+    {
+     "class": 8,
+     "role": "coder"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 182.3,
+     "loadS": 0.88,
+     "holdsGb": 1.31,
+     "tools": 50,
+     "nativeTools": 28,
+     "route": 83,
+     "write": 33,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen2.5-coder-abliterate:7b",
+   "slug": "huihui-ai-qwen2.5-coder-abliterate-7b",
+   "from": "ollama huihui_ai/qwen2.5-coder-abliterate (the Hugging Face repo is gone)",
+   "base": "Qwen/Qwen2.5-Coder-7B-Instruct",
+   "license": "apache-2.0",
+   "kind": "abliterated",
+   "redistributable": true,
+   "note": null,
+   "picks": [
+    {
+     "class": 16,
+     "role": "coder"
+    },
+    {
+     "class": 24,
+     "role": "coder"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 56.7,
+     "loadS": 1.39,
+     "holdsGb": 5.43,
+     "tools": 94,
+     "nativeTools": 28,
+     "route": 100,
+     "write": 67,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen3-abliterated:1.7b",
+   "slug": "huihui-ai-qwen3-abliterated-1.7b",
+   "from": "huihui-ai/Qwen3-1.7B-abliterated",
+   "base": "Qwen/Qwen3-1.7B",
+   "license": "apache-2.0",
+   "kind": "abliterated",
+   "redistributable": true,
+   "note": null,
+   "picks": [
+    {
+     "class": 16,
+     "role": "router"
+    },
+    {
+     "class": 24,
+     "role": "router"
+    },
+    {
+     "class": 32,
+     "role": "router"
+    },
+    {
+     "class": 48,
+     "role": "router"
+    },
+    {
+     "class": 64,
+     "role": "router"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 178.8,
+     "loadS": 0.88,
+     "holdsGb": 1.84,
+     "tools": 83,
+     "nativeTools": 89,
+     "route": 75,
+     "write": 67,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    },
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 183.7,
+     "loadS": 0.92,
+     "holdsGb": 3.25,
+     "tools": 83,
+     "nativeTools": 89,
+     "route": 75,
+     "write": 67,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen3-abliterated:8b",
+   "slug": "huihui-ai-qwen3-abliterated-8b",
+   "from": "huihui-ai/Qwen3-8B-abliterated",
+   "base": "Qwen/Qwen3-8B",
+   "license": "apache-2.0",
+   "kind": "abliterated",
+   "redistributable": true,
+   "note": null,
+   "picks": [
+    {
+     "class": 16,
+     "role": "writer"
+    },
+    {
+     "class": 16,
+     "role": "reasoning"
+    },
+    {
+     "class": 24,
+     "role": "writer"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 52.6,
+     "loadS": 1.93,
+     "holdsGb": 7.29,
+     "tools": 100,
+     "nativeTools": 89,
+     "route": 92,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen3.5-abliterated:2b",
+   "slug": "huihui-ai-qwen3.5-abliterated-2b",
+   "from": "huihui-ai/Huihui-Qwen3.5-2B-abliterated",
+   "base": "Qwen/Qwen3.5-2B",
+   "license": "apache-2.0",
+   "kind": "abliterated",
+   "redistributable": true,
+   "note": null,
+   "picks": [
+    {
+     "class": 8,
+     "role": "vision"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 129.9,
+     "loadS": 1.75,
+     "holdsGb": 2.99,
+     "tools": 83,
+     "nativeTools": 94,
+     "route": 58,
+     "write": 67,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen3.5-abliterated:4b",
+   "slug": "huihui-ai-qwen3.5-abliterated-4b",
+   "from": "huihui-ai/Huihui-Qwen3.5-4B-abliterated",
+   "base": "Qwen/Qwen3.5-4B",
+   "license": "apache-2.0",
+   "kind": "abliterated",
+   "redistributable": true,
+   "note": null,
+   "picks": [
+    {
+     "class": 16,
+     "role": "vision"
+    },
+    {
+     "class": 24,
+     "role": "vision"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 68.7,
+     "loadS": 2.26,
+     "holdsGb": 3.68,
+     "tools": 83,
+     "nativeTools": 83,
+     "route": 75,
+     "write": 33,
+     "fits": false,
+     "why": "holds 3.68 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    },
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 65.6,
+     "loadS": 2.02,
+     "holdsGb": 4.13,
+     "tools": 83,
+     "nativeTools": 83,
+     "route": 75,
+     "write": 67,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "gemma4:e4b",
+   "slug": "gemma4-e4b",
+   "from": "ollama gemma4:e4b",
+   "base": null,
+   "license": null,
+   "kind": "stock",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 61.3,
+     "loadS": 3.58,
+     "holdsGb": 6.96,
+     "tools": 94,
+     "nativeTools": 83,
+     "route": 100,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "granite4.1:3b",
+   "slug": "granite4.1-3b",
+   "from": "ollama library granite4.1:3b",
+   "base": "ibm-granite/granite-4.1-3b",
+   "license": "apache-2.0",
+   "kind": "stock",
+   "redistributable": true,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 98.2,
+     "loadS": 1.09,
+     "holdsGb": 2.51,
+     "tools": 89,
+     "nativeTools": 94,
+     "route": 92,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/deepseek-r1-abliterated:8b",
+   "slug": "huihui-ai-deepseek-r1-abliterated-8b",
+   "from": "ollama huihui_ai/deepseek-r1-abliterated:8b",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 52.3,
+     "loadS": 2.41,
+     "holdsGb": 7.42,
+     "tools": 28,
+     "nativeTools": 28,
+     "route": 0,
+     "write": 67,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen3-abliterated:0.6b",
+   "slug": "huihui-ai-qwen3-abliterated-0.6b",
+   "from": "huihui-ai/Qwen3-0.6B-abliterated",
+   "base": "Qwen/Qwen3-0.6B",
+   "license": "apache-2.0",
+   "kind": "abliterated",
+   "redistributable": true,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 339.4,
+     "loadS": 0.88,
+     "holdsGb": 1.29,
+     "tools": 61,
+     "nativeTools": 50,
+     "route": 67,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "local/gemma-4-e4b-it-ultra-uncensored-heretic-q4_k_m",
+   "slug": "local-gemma-4-e4b-it-ultra-uncensored-heretic-q4-k-m",
+   "from": "ollama local/gemma-4-e4b-it-ultra-uncensored-heretic-q4_k_m",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 64.6,
+     "loadS": 2.09,
+     "holdsGb": 5.21,
+     "tools": 94,
+     "nativeTools": 89,
+     "route": 100,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "local/qwen3-coder-30b-a3b-instruct-heretic.i1-iq3_m",
+   "slug": "local-qwen3-coder-30b-a3b-instruct-heretic.i1-iq3-m",
+   "from": "ollama local/qwen3-coder-30b-a3b-instruct-heretic.i1-iq3_m",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 86.5,
+     "loadS": 5.43,
+     "holdsGb": 5.23,
+     "tools": 89,
+     "nativeTools": 72,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "swap grew 418 MB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "local/qwen3.5-4b-heretic.i1-q4_k_m",
+   "slug": "local-qwen3.5-4b-heretic.i1-q4-k-m",
+   "from": "ollama local/qwen3.5-4b-heretic.i1-q4_k_m",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 66.8,
+     "loadS": 0.95,
+     "holdsGb": 5.34,
+     "tools": 83,
+     "nativeTools": 83,
+     "route": 100,
+     "write": 67,
+     "fits": false,
+     "why": "holds 5.34 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "local/qwen3.6-27b-heretic.i1-iq4_xs",
+   "slug": "local-qwen3.6-27b-heretic.i1-iq4-xs",
+   "from": "ollama local/qwen3.6-27b-heretic.i1-iq4_xs",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 12.4,
+     "loadS": 5.85,
+     "holdsGb": 14.75,
+     "tools": 94,
+     "nativeTools": 89,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 14.75 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "local/qwen3.8-9b-heretic-uncensored.i1-q4_k_m",
+   "slug": "local-qwen3.8-9b-heretic-uncensored.i1-q4-k-m",
+   "from": "ollama local/qwen3.8-9b-heretic-uncensored.i1-q4_k_m",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 43.6,
+     "loadS": 1.71,
+     "holdsGb": 6.41,
+     "tools": 94,
+     "nativeTools": 83,
+     "route": 100,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "ministral-3:3b",
+   "slug": "ministral-3-3b",
+   "from": "ollama ministral-3:3b",
+   "base": null,
+   "license": null,
+   "kind": "stock",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 91.1,
+     "loadS": 1.93,
+     "holdsGb": 3.62,
+     "tools": 83,
+     "nativeTools": 72,
+     "route": 100,
+     "write": 67,
+     "fits": false,
+     "why": "holds 3.62 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "qwen3.5:4b",
+   "slug": "qwen3.5-4b",
+   "from": "ollama qwen3.5:4b",
+   "base": null,
+   "license": null,
+   "kind": "stock",
+   "redistributable": false,
+   "note": null,
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 67.8,
+     "loadS": 2.2,
+     "holdsGb": 3.7,
+     "tools": 89,
+     "nativeTools": 94,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 3.7 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  }
+ ],
+ "bench": [
+  "m5-pro-24gb-as-8gb.json",
+  "m5-pro-24gb.json"
+ ]
+}

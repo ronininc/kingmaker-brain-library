@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ronininc/kingmaker-brain-library/main/schema/library.schema.json",
+  "title": "Kingmaker Brain Library",
+  "type": "object",
+  "required": [
+    "schema",
+    "devices",
+    "classes",
+    "models"
+  ],
+  "properties": {
+    "schema": {
+      "const": "kingmaker.brain-library/1"
+    },
+    "repo": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "chip",
+          "ramGb",
+          "class"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "chip": {
+            "type": "string"
+          },
+          "ramGb": {
+            "type": "integer"
+          },
+          "bandwidthGBs": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "macs": {
+            "type": "string"
+          },
+          "class": {
+            "type": "integer"
+          },
+          "pack": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "classes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "class",
+          "roles",
+          "maxResidentGb",
+          "context",
+          "concurrent",
+          "status"
+        ],
+        "properties": {
+          "class": {
+            "type": "integer"
+          },
+          "pack": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "roles": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "maxResidentGb": {
+            "type": "number"
+          },
+          "context": {
+            "type": "integer"
+          },
+          "concurrent": {
+            "type": "integer"
+          },
+          "voice": {
+            "enum": [
+              "on",
+              "off"
+            ]
+          },
+          "pictures": {
+            "type": "boolean"
+          },
+          "downloadGb": {
+            "type": "number"
+          },
+          "basis": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "measured",
+              "estimate"
+            ]
+          },
+          "measuredOn": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "tag",
+          "slug",
+          "status"
+        ],
+        "properties": {
+          "tag": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "base": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "license": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "kind": {
+            "type": "string"
+          },
+          "redistributable": {
+            "type": "boolean"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "pick",
+              "option",
+              "retired"
+            ]
+          },
+          "picks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "class": {
+                  "type": "integer"
+                },
+                "role": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "bench": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "weights": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "release": {
+                "type": "string"
+              },
+              "gguf": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "size": {
+                "type": "integer"
+              },
+              "modelfile": {
+                "type": "string"
+              },
+              "parts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "size",
+                    "sha256"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "integer"
+                    },
+                    "sha256": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "bench": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
