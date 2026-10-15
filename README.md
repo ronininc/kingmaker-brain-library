@@ -16,9 +16,9 @@ whether one replaces a pick.
 | 8 GB · Lean | 8 GB standard (M1/M2/M3 base) | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | `qwen2.5-coder-abliterate:1.5b` | `qwen3.5-abliterated:2b` | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | 3.3 GB | 4k | 1 | text only | off | measured (m5-pro-24gb-as-8gb.json) |
 | 16 GB · Standard | 16 GB (and 18 GB M3 Pro) | `qwen3-abliterated:1.7b` | `qwen3-abliterated:8b` | `qwen2.5-coder-abliterate:7b` | `qwen3.5-abliterated:4b` | `qwen3-abliterated:8b` | 7.5 GB | 8k | 2 | on | off | estimate |
 | 24 GB · Full | 24 GB (M2/M3/M4/M5, M4/M5 Pro) | `qwen3-abliterated:1.7b` | `qwen3-abliterated:8b` | `qwen2.5-coder-abliterate:7b` | `qwen3.5-abliterated:4b` | `mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M` | 11 GB | 16k | 2 | on | on | measured (m5-pro-24gb.json) |
-| 32 GB · Pro | 32 GB (and 36 GB M3 Pro / M4 Max / M5 Max) | `qwen3-abliterated:1.7b` | `PENDING` | `PENDING` | `PENDING` | `deepseek-r1-abliterated:14b` | 18 GB | 32k | 3 | on | on | estimate |
-| 48 GB · Studio | 48 GB (M3 Max, M4 Pro/Max, M5 Pro/Max) | `qwen3-abliterated:1.7b` | `PENDING` | `PENDING` | `PENDING` | `PENDING` | 26 GB | 32k | 3 | on | on | estimate |
-| 64 GB · Max | 64 GB and up (Max, Ultra, Studio) | `qwen3-abliterated:1.7b` | `PENDING` | `PENDING` | `PENDING` | `PENDING` | 40 GB | 64k | 4 | on | on | estimate |
+| 32 GB · Pro | 32 GB (and 36 GB M3 Pro / M4 Max / M5 Max) | `qwen3-abliterated:1.7b` | `mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M` | `mradermacher/Qwen3-Coder-30B-A3B-Instruct-Heretic-i1-GGUF:i1-IQ3_M` | `qwen3.5-abliterated:4b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | 18 GB | 32k | 3 | on | on | estimate |
+| 48 GB · Studio | 48 GB (M3 Max, M4 Pro/Max, M5 Pro/Max) | `qwen3-abliterated:1.7b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | `mradermacher/Qwen3-Coder-30B-A3B-Instruct-Heretic-i1-GGUF:i1-IQ3_M` | `qwen3.5-abliterated:4b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | 26 GB | 32k | 3 | on | on | estimate |
+| 64 GB · Max | 64 GB and up (Max, Ultra, Studio) | `qwen3-abliterated:1.7b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | `mradermacher/Qwen3-Coder-30B-A3B-Instruct-Heretic-i1-GGUF:i1-IQ3_M` | `gemma4:e4b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | 40 GB | 64k | 4 | on | on | estimate |
 
 ## Every Mac
 
@@ -81,17 +81,20 @@ whether one replaces a pick.
 
 | Model | Kind | Licence | Status | Weights here | Best measured |
 |---|---|---|---|---|---|
+| `gemma4:e4b` | stock | none on its card | pick (64 GB vision) | pointer only | 61.3 tok/s, holds 6.96 GB, tools 94%, route 100%, write 100% (m5-pro-24gb.json) |
 | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | abliterated | apache-2.0 | pick (8 GB router, 8 GB writer, 8 GB reasoning) | not yet | 97 tok/s, holds 2.53 GB, tools 89%, route 92%, write 100% (m5-pro-24gb-as-8gb.json) |
-| `mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M` | heretic | none on its card | pick (24 GB reasoning) | pointer only | 42.5 tok/s, holds 10.43 GB, tools 94%, route 100%, write 100% (m5-pro-24gb.json) |
-| `deepseek-r1-abliterated:14b` | abliterated | none on its card | pick (32 GB reasoning) | pointer only | 28 tok/s, holds 11.56 GB, tools 28%, route 0%, write 100% (m5-pro-24gb.json) |
+| `mradermacher/Qwen3-Coder-30B-A3B-Instruct-Heretic-i1-GGUF:i1-IQ3_M` | uncensored | none on its card | pick (32 GB coder, 48 GB coder, 64 GB coder) | pointer only | — |
+| `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | uncensored | none on its card | pick (32 GB reasoning, 48 GB writer, 48 GB reasoning, 64 GB writer, 64 GB reasoning) | pointer only | — |
+| `mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M` | heretic | none on its card | pick (24 GB reasoning, 32 GB writer) | pointer only | 42.5 tok/s, holds 10.43 GB, tools 94%, route 100%, write 100% (m5-pro-24gb.json) |
 | `qwen2.5-coder-abliterate:1.5b` | abliterated | apache-2.0 | pick (8 GB coder) | not yet | 182.3 tok/s, holds 1.31 GB, tools 50%, route 83%, write 33% (m5-pro-24gb-as-8gb.json) |
 | `qwen2.5-coder-abliterate:7b` | abliterated | apache-2.0 | pick (16 GB coder, 24 GB coder) | not yet | 56.7 tok/s, holds 5.43 GB, tools 94%, route 100%, write 67% (m5-pro-24gb.json) |
 | `qwen3-abliterated:1.7b` | abliterated | apache-2.0 | pick (16 GB router, 24 GB router, 32 GB router, 48 GB router, 64 GB router) | not yet | 178.8 tok/s, holds 1.84 GB, tools 83%, route 75%, write 67% (m5-pro-24gb-as-8gb.json) |
 | `qwen3-abliterated:8b` | abliterated | apache-2.0 | pick (16 GB writer, 16 GB reasoning, 24 GB writer) | not yet | 52.6 tok/s, holds 7.29 GB, tools 100%, route 92%, write 100% (m5-pro-24gb.json) |
 | `qwen3.5-abliterated:2b` | abliterated | apache-2.0 | pick (8 GB vision) | not yet | 129.9 tok/s, holds 2.99 GB, tools 83%, route 58%, write 67% (m5-pro-24gb-as-8gb.json) |
-| `qwen3.5-abliterated:4b` | abliterated | apache-2.0 | pick (16 GB vision, 24 GB vision) | not yet | 68.7 tok/s, holds 3.68 GB, tools 83%, route 75%, write 33% (m5-pro-24gb-as-8gb.json) |
-| `gemma4:e4b` | stock | none on its card | option | pointer only | 61.3 tok/s, holds 6.96 GB, tools 94%, route 100%, write 100% (m5-pro-24gb.json) |
+| `qwen3.5-abliterated:4b` | abliterated | apache-2.0 | pick (16 GB vision, 24 GB vision, 32 GB vision, 48 GB vision) | not yet | 68.7 tok/s, holds 3.68 GB, tools 83%, route 75%, write 33% (m5-pro-24gb-as-8gb.json) |
 | `granite4.1:3b` | stock | apache-2.0 | option | not yet | 98.2 tok/s, holds 2.51 GB, tools 89%, route 92%, write 100% (m5-pro-24gb-as-8gb.json) |
+| `TrevorJS/gemma-4-E4B-it-uncensored-GGUF:Q4_K_M` | uncensored | none on its card | option | pointer only | 66.2 tok/s, holds 6.41 GB, tools 83%, route 92%, write 100% (m5-pro-24gb.json) |
+| `deepseek-r1-abliterated:14b` | abliterated | none on its card | option | pointer only | 28 tok/s, holds 11.56 GB, tools 28%, route 0%, write 100% (m5-pro-24gb.json) |
 | `deepseek-r1-abliterated:8b` | abliterated | none on its card | option | pointer only | 52.3 tok/s, holds 7.42 GB, tools 28%, route 0%, write 67% (m5-pro-24gb.json) |
 | `qwen3-abliterated:0.6b` | abliterated | apache-2.0 | option | not yet | 339.4 tok/s, holds 1.29 GB, tools 61%, route 67%, write 100% (m5-pro-24gb-as-8gb.json) |
 | `local/gemma-4-e4b-it-ultra-uncensored-heretic-q4_k_m` | uncensored | none on its card | option | pointer only | 64.6 tok/s, holds 5.21 GB, tools 94%, route 100%, write 100% (m5-pro-24gb.json) |
