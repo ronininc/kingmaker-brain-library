@@ -262,6 +262,75 @@
       "items": {
         "type": "string"
       }
+    },
+    "bigOptions": {
+      "type": "array",
+      "description": "Listed for Macs bigger than any profile class; never picked, never measured here, weights linked upstream.",
+      "items": {
+        "type": "object",
+        "required": [
+          "tag",
+          "license",
+          "from",
+          "forRamGb",
+          "files",
+          "runtime",
+          "status",
+          "basis"
+        ],
+        "properties": {
+          "tag": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "gguf": {
+            "type": "string"
+          },
+          "forRamGb": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "quant": {
+                  "type": "string"
+                },
+                "gb": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "runtime": {
+            "type": "string"
+          },
+          "status": {
+            "const": "option"
+          },
+          "basis": {
+            "const": "estimate"
+          },
+          "redistributable": {
+            "const": false
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
     }
   }
 }
