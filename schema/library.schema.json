@@ -173,6 +173,15 @@
               "null"
             ]
           },
+          "capabilities": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
           "status": {
             "enum": [
               "pick",
