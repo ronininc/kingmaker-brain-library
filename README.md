@@ -13,7 +13,7 @@ whether one replaces a pick.
 
 | Pack | Macs | Router | Writer | Coder | Vision | Reasoning | Per model | Context | At once | Voice | Pictures | Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 8 GB · Lean | 8 GB standard (M1/M2/M3 base) | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | `qwen2.5-coder-abliterate:1.5b` | `qwen3.5-abliterated:2b` | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | 3.3 GB | 4k | 1 | text only | off | measured (m5-pro-24gb-as-8gb.json) |
+| 8 GB · Lean | 8 GB standard (M1/M2/M3 base) | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | `qwen2.5-coder-abliterate:1.5b` | `qwen3.5-abliterated:2b` | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | 3.3 GB | 4k | 1 | text only | off | measured (m5-pro-24gb-as-8gb.json, vm/m5-pro-virtual-8gb.json) |
 | 16 GB · Standard | 16 GB (and 18 GB M3 Pro) | `qwen3-abliterated:1.7b` | `qwen3-abliterated:8b` | `qwen2.5-coder-abliterate:7b` | `qwen3.5-abliterated:4b` | `qwen3-abliterated:8b` | 7.5 GB | 8k | 2 | on | off | estimate |
 | 24 GB · Full | 24 GB (M2/M3/M4/M5, M4/M5 Pro) | `qwen3-abliterated:1.7b` | `qwen3-abliterated:8b` | `qwen2.5-coder-abliterate:7b` | `qwen3.5-abliterated:4b` | `TrevorJS/gemma-4-12B-it-uncensored-GGUF:Q4_K_M` | 8.5 GB | 8k | 2 | on | on | measured (m5-pro-24gb.json) |
 | 32 GB · Pro | 32 GB (and 36 GB M3 Pro / M4 Max / M5 Max) | `qwen3-abliterated:1.7b` | `mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M` | `mradermacher/Qwen3-Coder-30B-A3B-Instruct-Heretic-i1-GGUF:i1-IQ3_M` | `qwen3.5-abliterated:4b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | 18 GB | 32k | 3 | on | on | estimate |
@@ -88,8 +88,8 @@ whether one replaces a pick.
 | `mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M` | heretic | none on its card | pick (32 GB writer) | pointer only | 42.5 tok/s, holds 10.43 GB, tools 94%, route 100%, write 100% (m5-pro-24gb.json) |
 | `TrevorJS/gemma-4-12B-it-uncensored-GGUF:Q4_K_M` | uncensored | apache-2.0 | pick (24 GB reasoning) | not yet | 32.7 tok/s, holds 8.39 GB, tools 100%, route 100%, write 100% (m5-pro-24gb.json) |
 | `qwen2.5-coder-abliterate:1.5b` | abliterated | apache-2.0 | pick (8 GB coder) | [model-huihui-ai-qwen2.5-coder-abliterate-1.5b](https://github.com/ronininc/kingmaker-brain-library/releases/tag/model-huihui-ai-qwen2.5-coder-abliterate-1.5b) | 182.3 tok/s, holds 1.31 GB, tools 50%, route 83%, write 33% (m5-pro-24gb-as-8gb.json) |
-| `qwen2.5-coder-abliterate:7b` | abliterated | apache-2.0 | pick (16 GB coder, 24 GB coder) | not yet | 56.7 tok/s, holds 5.43 GB, tools 94%, route 100%, write 67% (m5-pro-24gb.json) |
-| `qwen3-abliterated:1.7b` | abliterated | apache-2.0 | pick (16 GB router, 24 GB router, 32 GB router, 48 GB router, 64 GB router) | not yet | 178.8 tok/s, holds 1.84 GB, tools 83%, route 75%, write 67% (m5-pro-24gb-as-8gb.json) |
+| `qwen2.5-coder-abliterate:7b` | abliterated | apache-2.0 | pick (16 GB coder, 24 GB coder) | [model-huihui-ai-qwen2.5-coder-abliterate-7b](https://github.com/ronininc/kingmaker-brain-library/releases/tag/model-huihui-ai-qwen2.5-coder-abliterate-7b) | 56.7 tok/s, holds 5.43 GB, tools 94%, route 100%, write 67% (m5-pro-24gb.json) |
+| `qwen3-abliterated:1.7b` | abliterated | apache-2.0 | pick (16 GB router, 24 GB router, 32 GB router, 48 GB router, 64 GB router) | [model-huihui-ai-qwen3-abliterated-1.7b](https://github.com/ronininc/kingmaker-brain-library/releases/tag/model-huihui-ai-qwen3-abliterated-1.7b) | 178.8 tok/s, holds 1.84 GB, tools 83%, route 75%, write 67% (m5-pro-24gb-as-8gb.json) |
 | `qwen3-abliterated:8b` | abliterated | apache-2.0 | pick (16 GB writer, 16 GB reasoning, 24 GB writer) | not yet | 52.6 tok/s, holds 7.29 GB, tools 100%, route 92%, write 100% (m5-pro-24gb.json) |
 | `qwen3.5-abliterated:2b` | abliterated | apache-2.0 | pick (8 GB vision) | not yet | 129.9 tok/s, holds 2.99 GB, tools 83%, route 58%, write 67% (m5-pro-24gb-as-8gb.json) |
 | `qwen3.5-abliterated:4b` | abliterated | apache-2.0 | pick (16 GB vision, 24 GB vision, 32 GB vision, 48 GB vision) | not yet | 68.7 tok/s, holds 3.68 GB, tools 83%, route 75%, write 33% (m5-pro-24gb-as-8gb.json) |
@@ -122,6 +122,15 @@ whether one replaces a pick.
 | `local/rvn-iq4_xs-mtp` | stock | none on its card | option | pointer only | 15.5 tok/s, holds 9.47 GB, tools 100%, route 100%, write 100% (m5-pro-24gb.json) |
 | `ministral-3:3b` | stock | none on its card | option | pointer only | 91.1 tok/s, holds 3.62 GB, tools 83%, route 100%, write 67% (m5-pro-24gb-as-8gb.json) |
 | `qwen3.5:4b` | stock | none on its card | option | pointer only | 67.8 tok/s, holds 3.7 GB, tools 89%, route 100%, write 100% (m5-pro-24gb-as-8gb.json) |
+
+## For bigger Macs (options, not measured here)
+
+Listed for when a bigger Mac arrives. Never picked automatically, not benchmarked here, and the weights are linked upstream, not republished. These do not run in Ollama.
+
+| Model | Licence | For | Files | Runtime |
+|---|---|---|---|---|
+| [DeepSeek-V4.1-Flash-UNCENSORED](https://huggingface.co/dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8) · [GGUF](https://huggingface.co/Adolphsson/DeepSeek-V4.1-Flash-UNCENSORED-GGUF)<br><small>763B total, ~16B active per token (MoE), 1M tokens context. Weight-level abliteration. For a 512 GB Mac (M3 Ultra Mac Studio): Q4_K_M (426 GB) is the largest that leaves room for macOS; Q8_0 (508 GB) does not fit.</small> | mit | 512 GB Macs | Q2_K 270.6 GB, Q3_K_M 351.7 GB, Q4_K_M 426.1 GB, Q8_0 508 GB, mmproj-BF16 (vision projector) 1 GB | Not Ollama: antirez's ds4 engine, or a llama.cpp build with DeepSeek V4/V4.1 support. |
+| [Huihui-DeepSeek-V4-Flash-abliterated](https://huggingface.co/huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF)<br><small>DeepSeek V4 Flash (MoE). For 192–256 GB Macs (M2 Ultra 192 GB, M3 Ultra 256 GB): ds4-Q2 or Q4_K.</small> | mit | 192 / 256 GB Macs | ds4-Q2 86.7 GB, Q2_K 99.7 GB, Q4_K 164.6 GB, MTP draft (speculative decoding) 3.8 GB | Not Ollama: antirez's ds4 engine, or a llama.cpp build with DeepSeek V4 support. |
 
 ## Install a pick with Kingmaker
 

@@ -39,5 +39,51 @@
     "sha256": "4f3f998aec583f3499649a004f86c89ca57b0121b0d88451535dcef6b6e668ac"
    }
   ]
+ },
+ "huihui_ai/qwen2.5-coder-abliterate:7b": {
+  "tag": "huihui_ai/qwen2.5-coder-abliterate:7b",
+  "release": "model-huihui-ai-qwen2.5-coder-abliterate-7b",
+  "gguf": "huihui-ai-qwen2.5-coder-abliterate-7b.gguf",
+  "sha256": "3f77a775700ba9f211e46a69538e15ab9324609e02c7bd395a994c5d1c4139f6",
+  "size": 4683074080,
+  "license": "apache-2.0",
+  "from": "ollama huihui_ai/qwen2.5-coder-abliterate (the Hugging Face repo is gone)",
+  "base": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "modelfile": "Modelfile",
+  "parts": [
+   {
+    "name": "huihui-ai-qwen2.5-coder-abliterate-7b.gguf.part-000",
+    "size": 1900000000,
+    "sha256": "063acc5b519afc86f574a4f51175b40077972b8e9cd933f0cb4f3d9836a618b3"
+   },
+   {
+    "name": "huihui-ai-qwen2.5-coder-abliterate-7b.gguf.part-001",
+    "size": 1900000000,
+    "sha256": "9e926cdc3ac43df007cb6360f66ca1164c86f549e3c92e6aaa4e26deea8bddac"
+   },
+   {
+    "name": "huihui-ai-qwen2.5-coder-abliterate-7b.gguf.part-002",
+    "size": 883074080,
+    "sha256": "34171e6c25b4a273fbc72cc67f4ba917117887cc77bea5596cda084adc74c046"
+   }
+  ]
+ },
+ "huihui_ai/qwen3-abliterated:1.7b": {
+  "tag": "huihui_ai/qwen3-abliterated:1.7b",
+  "release": "model-huihui-ai-qwen3-abliterated-1.7b",
+  "gguf": "huihui-ai-qwen3-abliterated-1.7b.gguf",
+  "sha256": "11e56b54062941d7c415ddb083375eb227004b3c23134d340d0cd9c334b73662",
+  "size": 1107404448,
+  "license": "apache-2.0",
+  "from": "huihui-ai/Qwen3-1.7B-abliterated",
+  "base": "Qwen/Qwen3-1.7B",
+  "modelfile": "Modelfile",
+  "parts": [
+   {
+    "name": "huihui-ai-qwen3-abliterated-1.7b.gguf.part-000",
+    "size": 1107404448,
+    "sha256": "11e56b54062941d7c415ddb083375eb227004b3c23134d340d0cd9c334b73662"
+   }
+  ]
  }
 }

@@ -1,8 +1,8 @@
 {
  "schema": "kingmaker.brain-library/1",
  "repo": "ronininc/kingmaker-brain-library",
- "updatedAt": "2026-10-16T02:04:49.155Z",
- "source": "ronininc/Kingmaker sol-ghost 1cf3e48",
+ "updatedAt": "2026-10-16T02:52:52.327Z",
+ "source": "ronininc/Kingmaker sol-ghost 84aed3e",
  "devices": [
   {
    "id": "m1-8gb",
@@ -494,7 +494,8 @@
    "basis": "measured: 8 GB simulation on an M5 Pro (4.8 GiB GPU budget, as the real M3 reports) + the 2026-10-09 real 8 GB M3 run; the real 8 GB M3 bench is pending",
    "status": "measured",
    "measuredOn": [
-    "m5-pro-24gb-as-8gb.json"
+    "m5-pro-24gb-as-8gb.json",
+    "vm/m5-pro-virtual-8gb.json"
    ]
   },
   {
@@ -695,6 +696,23 @@
      "host": "Apple M5 Pro",
      "ramGb": 24,
      "simulatedAsGb": 8
+    },
+    {
+     "file": "vm/m5-pro-virtual-8gb.json",
+     "context": 4096,
+     "tokS": 6.1,
+     "loadS": 3.67,
+     "holdsGb": 4.17,
+     "tools": 89,
+     "nativeTools": 72,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 4.17 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro (Virtual)",
+     "ramGb": 8,
+     "simulatedAsGb": null
     }
    ],
    "weights": {
@@ -971,7 +989,34 @@
      "simulatedAsGb": null
     }
    ],
-   "weights": null
+   "weights": {
+    "tag": "huihui_ai/qwen2.5-coder-abliterate:7b",
+    "release": "model-huihui-ai-qwen2.5-coder-abliterate-7b",
+    "gguf": "huihui-ai-qwen2.5-coder-abliterate-7b.gguf",
+    "sha256": "3f77a775700ba9f211e46a69538e15ab9324609e02c7bd395a994c5d1c4139f6",
+    "size": 4683074080,
+    "license": "apache-2.0",
+    "from": "ollama huihui_ai/qwen2.5-coder-abliterate (the Hugging Face repo is gone)",
+    "base": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "modelfile": "Modelfile",
+    "parts": [
+     {
+      "name": "huihui-ai-qwen2.5-coder-abliterate-7b.gguf.part-000",
+      "size": 1900000000,
+      "sha256": "063acc5b519afc86f574a4f51175b40077972b8e9cd933f0cb4f3d9836a618b3"
+     },
+     {
+      "name": "huihui-ai-qwen2.5-coder-abliterate-7b.gguf.part-001",
+      "size": 1900000000,
+      "sha256": "9e926cdc3ac43df007cb6360f66ca1164c86f549e3c92e6aaa4e26deea8bddac"
+     },
+     {
+      "name": "huihui-ai-qwen2.5-coder-abliterate-7b.gguf.part-002",
+      "size": 883074080,
+      "sha256": "34171e6c25b4a273fbc72cc67f4ba917117887cc77bea5596cda084adc74c046"
+     }
+    ]
+   }
   },
   {
    "tag": "huihui_ai/qwen3-abliterated:1.7b",
@@ -1046,7 +1091,24 @@
      "simulatedAsGb": null
     }
    ],
-   "weights": null
+   "weights": {
+    "tag": "huihui_ai/qwen3-abliterated:1.7b",
+    "release": "model-huihui-ai-qwen3-abliterated-1.7b",
+    "gguf": "huihui-ai-qwen3-abliterated-1.7b.gguf",
+    "sha256": "11e56b54062941d7c415ddb083375eb227004b3c23134d340d0cd9c334b73662",
+    "size": 1107404448,
+    "license": "apache-2.0",
+    "from": "huihui-ai/Qwen3-1.7B-abliterated",
+    "base": "Qwen/Qwen3-1.7B",
+    "modelfile": "Modelfile",
+    "parts": [
+     {
+      "name": "huihui-ai-qwen3-abliterated-1.7b.gguf.part-000",
+      "size": 1107404448,
+      "sha256": "11e56b54062941d7c415ddb083375eb227004b3c23134d340d0cd9c334b73662"
+     }
+    ]
+   }
   },
   {
    "tag": "huihui_ai/qwen3-abliterated:8b",
@@ -1320,6 +1382,23 @@
      "host": "Apple M5 Pro",
      "ramGb": 24,
      "simulatedAsGb": 8
+    },
+    {
+     "file": "vm/m5-pro-virtual-8gb.json",
+     "context": 4096,
+     "tokS": 6.8,
+     "loadS": 3.66,
+     "holdsGb": 4.44,
+     "tools": 89,
+     "nativeTools": 94,
+     "route": 92,
+     "write": 100,
+     "fits": false,
+     "why": "holds 4.44 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro (Virtual)",
+     "ramGb": 8,
+     "simulatedAsGb": null
     }
    ],
    "weights": null
@@ -2290,8 +2369,99 @@
    "weights": null
   }
  ],
+ "bigOptions": [
+  {
+   "tag": "DeepSeek-V4.1-Flash-UNCENSORED",
+   "kind": "abliterated",
+   "license": "mit",
+   "base": "deepseek-ai/DeepSeek-V4.1-Flash",
+   "from": "dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8",
+   "gguf": "Adolphsson/DeepSeek-V4.1-Flash-UNCENSORED-GGUF",
+   "params": "763B total, ~16B active per token (MoE)",
+   "context": "1M tokens",
+   "forRamGb": [
+    512
+   ],
+   "files": [
+    {
+     "quant": "Q2_K",
+     "gb": 270.6
+    },
+    {
+     "quant": "Q3_K_M",
+     "gb": 351.7
+    },
+    {
+     "quant": "Q4_K_M",
+     "gb": 426.1
+    },
+    {
+     "quant": "Q8_0",
+     "gb": 508
+    },
+    {
+     "quant": "mmproj-BF16 (vision projector)",
+     "gb": 1
+    }
+   ],
+   "runtime": "Not Ollama: antirez's ds4 engine, or a llama.cpp build with DeepSeek V4/V4.1 support.",
+   "note": "Weight-level abliteration. For a 512 GB Mac (M3 Ultra Mac Studio): Q4_K_M (426 GB) is the largest that leaves room for macOS; Q8_0 (508 GB) does not fit.",
+   "slug": "deepseek-v4.1-flash-uncensored",
+   "status": "option",
+   "basis": "estimate",
+   "redistributable": false,
+   "weights": null,
+   "links": [
+    "https://huggingface.co/dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8",
+    "https://huggingface.co/Adolphsson/DeepSeek-V4.1-Flash-UNCENSORED-GGUF"
+   ]
+  },
+  {
+   "tag": "Huihui-DeepSeek-V4-Flash-abliterated",
+   "kind": "abliterated",
+   "license": "mit",
+   "base": "deepseek-ai/DeepSeek-V4-Flash",
+   "from": "huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF",
+   "gguf": "huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF",
+   "params": "DeepSeek V4 Flash (MoE)",
+   "context": null,
+   "forRamGb": [
+    192,
+    256
+   ],
+   "files": [
+    {
+     "quant": "ds4-Q2",
+     "gb": 86.7
+    },
+    {
+     "quant": "Q2_K",
+     "gb": 99.7
+    },
+    {
+     "quant": "Q4_K",
+     "gb": 164.6
+    },
+    {
+     "quant": "MTP draft (speculative decoding)",
+     "gb": 3.8
+    }
+   ],
+   "runtime": "Not Ollama: antirez's ds4 engine, or a llama.cpp build with DeepSeek V4 support.",
+   "note": "For 192–256 GB Macs (M2 Ultra 192 GB, M3 Ultra 256 GB): ds4-Q2 or Q4_K.",
+   "slug": "huihui-deepseek-v4-flash-abliterated",
+   "status": "option",
+   "basis": "estimate",
+   "redistributable": false,
+   "weights": null,
+   "links": [
+    "https://huggingface.co/huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF"
+   ]
+  }
+ ],
  "bench": [
   "m5-pro-24gb-as-8gb.json",
-  "m5-pro-24gb.json"
+  "m5-pro-24gb.json",
+  "vm/m5-pro-virtual-8gb.json"
  ]
 }
