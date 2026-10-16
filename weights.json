@@ -113,5 +113,84 @@
     "sha256": "ec55d4b42c798438e26a0ce3faa2e4a794ec14074dd601bb1a6212ba0767aa1d"
    }
   ]
+ },
+ "huihui_ai/qwen3.5-abliterated:2b": {
+  "tag": "huihui_ai/qwen3.5-abliterated:2b",
+  "release": "model-huihui-ai-qwen3.5-abliterated-2b",
+  "gguf": "huihui-ai-qwen3.5-abliterated-2b.gguf",
+  "sha256": "4ecac2ba3fd000cf4638ce65dbffacbd8062c2c87a24a75559af421341adb4b2",
+  "size": 1945311744,
+  "license": "apache-2.0",
+  "from": "huihui-ai/Huihui-Qwen3.5-2B-abliterated",
+  "base": "Qwen/Qwen3.5-2B",
+  "modelfile": "Modelfile",
+  "parts": [
+   {
+    "name": "huihui-ai-qwen3.5-abliterated-2b.gguf.part-000",
+    "size": 1900000000,
+    "sha256": "ca063ccf0978b31baf752c4760b775068c026e8ad3c2581e1e91a7b8e156a8ba"
+   },
+   {
+    "name": "huihui-ai-qwen3.5-abliterated-2b.gguf.part-001",
+    "size": 45311744,
+    "sha256": "780f548d9f5efec10927c092fecaa998a1b7751511f8f5163b215413c1817e38"
+   }
+  ]
+ },
+ "huihui_ai/qwen3.5-abliterated:4b": {
+  "tag": "huihui_ai/qwen3.5-abliterated:4b",
+  "release": "model-huihui-ai-qwen3.5-abliterated-4b",
+  "gguf": "huihui-ai-qwen3.5-abliterated-4b.gguf",
+  "sha256": "460a1ec4580a90414bd43796cd71e845b063a0f565449a9cdf6f0397f843c37e",
+  "size": 3315321536,
+  "license": "apache-2.0",
+  "from": "huihui-ai/Huihui-Qwen3.5-4B-abliterated",
+  "base": "Qwen/Qwen3.5-4B",
+  "modelfile": "Modelfile",
+  "parts": [
+   {
+    "name": "huihui-ai-qwen3.5-abliterated-4b.gguf.part-000",
+    "size": 1900000000,
+    "sha256": "883d3437be1b65e1192ef54292fdbda4c20e59002292dab5f459421553b57107"
+   },
+   {
+    "name": "huihui-ai-qwen3.5-abliterated-4b.gguf.part-001",
+    "size": 1415321536,
+    "sha256": "bc7537008405c9216430f3a6de8bf22356bde18b04206da35b56cb80dcb3c150"
+   }
+  ]
+ },
+ "hf.co/TrevorJS/gemma-4-12B-it-uncensored-GGUF:Q4_K_M": {
+  "tag": "hf.co/TrevorJS/gemma-4-12B-it-uncensored-GGUF:Q4_K_M",
+  "release": "model-trevorjs-gemma-4-12b-it-uncensored-gguf-q4-k-m",
+  "gguf": "trevorjs-gemma-4-12b-it-uncensored-gguf-q4-k-m.gguf",
+  "sha256": "6f78e675eddd0f1ec8079ba4f66193880e14dfcb42002b6bd72c18ad7c365494",
+  "size": 7381382208,
+  "license": "apache-2.0",
+  "from": "TrevorJS/gemma-4-12B-it-uncensored",
+  "base": "Gemma 4 12B",
+  "modelfile": "Modelfile",
+  "parts": [
+   {
+    "name": "trevorjs-gemma-4-12b-it-uncensored-gguf-q4-k-m.gguf.part-000",
+    "size": 1900000000,
+    "sha256": "f6a20d384f7d5c5041896e392b8de95ccdd4324aa456345518c3e95649ae4df8"
+   },
+   {
+    "name": "trevorjs-gemma-4-12b-it-uncensored-gguf-q4-k-m.gguf.part-001",
+    "size": 1900000000,
+    "sha256": "45738c80903ceaadd6dc51c3513275a9328e9f07c7672db355aec5626df4becc"
+   },
+   {
+    "name": "trevorjs-gemma-4-12b-it-uncensored-gguf-q4-k-m.gguf.part-002",
+    "size": 1900000000,
+    "sha256": "a0954685eef879b4f2b5bf605b748752d643d3af6c8e3b47f12c10a78e8a1214"
+   },
+   {
+    "name": "trevorjs-gemma-4-12b-it-uncensored-gguf-q4-k-m.gguf.part-003",
+    "size": 1681382208,
+    "sha256": "5daed68ba29b005d3081c05b18fa97bcb507fcf2aa2adc4c5a7535cb9a6b98cb"
+   }
+  ]
  }
 }

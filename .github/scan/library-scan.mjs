@@ -64,6 +64,11 @@ const SHAPE = {
   'results[].loadS': num(0, 3600), 'results[].firstReplyS': num(0, 3600), 'results[].error': str(300),
   'results[].resident.sizeGb': num(0, 1024), 'results[].resident.gpuGb': num(0, 1024), 'results[].resident.contextLength': num(0, 1_048_576),
   'results[].speed.promptTokS': num(0, 50_000), 'results[].speed.genTokS': num(0, 2000), 'results[].speed.genTokens': num(0, 100_000),
+  // What the model read (prefill) and how much of a repeated system brief it read again (lib/model-bench.mjs prefixReuse).
+  'results[].speed.promptTokens': { type: 'number|null', lo: 0, hi: 1e6 }, 'results[].speed.promptMs': { type: 'number|null', lo: 0, hi: 3.6e6 },
+  'results[].speed.prefix': { type: 'null|object' }, 'results[].speed.prefix.firstTokens': { type: 'number|null', lo: 0, hi: 1e6 },
+  'results[].speed.prefix.secondTokens': { type: 'number|null', lo: 0, hi: 1e6 }, 'results[].speed.prefix.firstMs': { type: 'number|null', lo: 0, hi: 3.6e6 },
+  'results[].speed.prefix.secondMs': { type: 'number|null', lo: 0, hi: 3.6e6 }, 'results[].speed.prefix.reusedPct': { type: 'number|null', lo: 0, hi: 100 },
   'results[].memory.footprintPeakGb': num(0, 1024), 'results[].memory.minMemLevel': num(0, 100), 'results[].memory.peakRssGb': num(0, 1024),
   'results[].memory.runnersSeen': num(0, 64), 'results[].memory.steadyRssGb': num(0, 1024), 'results[].memory.swapDeltaMb': num(-1e6, 1e6),
   'results[].thermal.*.freePct': num(0, 100), 'results[].thermal.*.speedLimit': NUM_OR_NULL, 'results[].thermal.*.warning': { type: 'string|number|null', max: 40 },
