@@ -49,7 +49,10 @@ const lane = (p) => ({ [`${p}.pass`]: PASS.pass, [`${p}.of`]: PASS.of, [`${p}.pc
   [`${p}.by.*.pass`]: PASS.pass, [`${p}.by.*.of`]: PASS.of });
 const SHAPE = {
   schema: num(1, 1), slug: str(80, /^[a-z0-9][a-z0-9-]*$/), startedAt: str(30, ISO_RE), finishedAt: str(30, ISO_RE),
-  context: num(512, 1_048_576), maxResidentGb: num(0.5, 1024), simulated: { type: 'null|object' },
+  context: num(512, 1_048_576), maxResidentGb: num(0.5, 1024), simulated: { type: 'null|object' }, cooldownS: num(0, 3600),
+  // What made the file (lib/model-bench.mjs benchProvenance): Kingmaker's version and its checkout's commit and branch.
+  kingmaker: { type: 'null|object' }, 'kingmaker.version': { type: 'string|null', max: 24, re: /^[\w.+-]+$/ },
+  'kingmaker.commit': { type: 'string|null', max: 40, re: /^[0-9a-f]{40}$/ }, 'kingmaker.branch': { type: 'string|null', max: 80, re: /^[\w./-]+$/ },
   'host.chip': str(40, CHIP_RE), 'host.model': str(20, /^[A-Za-z]+\d+,\d+$|^VirtualMac\d+,\d+$/), 'host.ramGb': { type: 'number', in: RAM_GB },
   'host.macos': str(12, VERSION_RE), 'host.ollama': str(12, VERSION_RE),
   'simulated.asGb': { type: 'number', in: RAM_GB }, 'simulated.context': num(512, 1_048_576), 'simulated.gpuBudgetGib': num(0, 1024),

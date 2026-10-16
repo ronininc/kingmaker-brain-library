@@ -14,7 +14,7 @@ whether one replaces a pick.
 | Pack | Macs | Router | Writer | Coder | Vision | Reasoning | Per model | Context | At once | Voice | Pictures | Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 8 GB · Lean | 8 GB standard (M1/M2/M3 base) | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | `qwen2.5-coder-abliterate:1.5b` | `qwen3.5-abliterated:2b` | `mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M` | 3.3 GB | 4k | 1 | text only | off | measured (m5-pro-24gb-as-8gb.json, vm/m5-pro-virtual-8gb.json) |
-| 16 GB · Standard | 16 GB (and 18 GB M3 Pro) | `qwen3-abliterated:1.7b` | `qwen3-abliterated:8b` | `qwen2.5-coder-abliterate:7b` | `qwen3.5-abliterated:4b` | `qwen3-abliterated:8b` | 7.5 GB | 8k | 2 | on | off | estimate |
+| 16 GB · Standard | 16 GB (and 18 GB M3 Pro) | `qwen3-abliterated:1.7b` | `qwen3-abliterated:8b` | `qwen2.5-coder-abliterate:7b` | `qwen3.5-abliterated:4b` | `qwen3-abliterated:8b` | 7.5 GB | 8k | 2 | on | off | measured (vm/m5-pro-virtual-16gb.json) |
 | 24 GB · Full | 24 GB (M2/M3/M4/M5, M4/M5 Pro) | `qwen3-abliterated:1.7b` | `qwen3-abliterated:8b` | `qwen2.5-coder-abliterate:7b` | `qwen3.5-abliterated:4b` | `TrevorJS/gemma-4-12B-it-uncensored-GGUF:Q4_K_M` | 8.5 GB | 8k | 2 | on | on | measured (m5-pro-24gb.json) |
 | 32 GB · Pro | 32 GB (and 36 GB M3 Pro / M4 Max / M5 Max) | `qwen3-abliterated:1.7b` | `mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M` | `mradermacher/Qwen3-Coder-30B-A3B-Instruct-Heretic-i1-GGUF:i1-IQ3_M` | `qwen3.5-abliterated:4b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | 18 GB | 32k | 3 | on | on | estimate |
 | 48 GB · Studio | 48 GB (M3 Max, M4 Pro/Max, M5 Pro/Max) | `qwen3-abliterated:1.7b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | `mradermacher/Qwen3-Coder-30B-A3B-Instruct-Heretic-i1-GGUF:i1-IQ3_M` | `qwen3.5-abliterated:4b` | `mradermacher/Qwen3.6-27B-heretic-i1-GGUF:i1-IQ4_XS` | 26 GB | 32k | 3 | on | on | estimate |
@@ -90,7 +90,7 @@ whether one replaces a pick.
 | `qwen2.5-coder-abliterate:1.5b` | abliterated | apache-2.0 | pick (8 GB coder) | [model-huihui-ai-qwen2.5-coder-abliterate-1.5b](https://github.com/ronininc/kingmaker-brain-library/releases/tag/model-huihui-ai-qwen2.5-coder-abliterate-1.5b) | 182.3 tok/s, holds 1.31 GB, tools 50%, route 83%, write 33% (m5-pro-24gb-as-8gb.json) |
 | `qwen2.5-coder-abliterate:7b` | abliterated | apache-2.0 | pick (16 GB coder, 24 GB coder) | [model-huihui-ai-qwen2.5-coder-abliterate-7b](https://github.com/ronininc/kingmaker-brain-library/releases/tag/model-huihui-ai-qwen2.5-coder-abliterate-7b) | 56.7 tok/s, holds 5.43 GB, tools 94%, route 100%, write 67% (m5-pro-24gb.json) |
 | `qwen3-abliterated:1.7b` | abliterated | apache-2.0 | pick (16 GB router, 24 GB router, 32 GB router, 48 GB router, 64 GB router) | [model-huihui-ai-qwen3-abliterated-1.7b](https://github.com/ronininc/kingmaker-brain-library/releases/tag/model-huihui-ai-qwen3-abliterated-1.7b) | 178.8 tok/s, holds 1.84 GB, tools 83%, route 75%, write 67% (m5-pro-24gb-as-8gb.json) |
-| `qwen3-abliterated:8b` | abliterated | apache-2.0 | pick (16 GB writer, 16 GB reasoning, 24 GB writer) | not yet | 52.6 tok/s, holds 7.29 GB, tools 100%, route 92%, write 100% (m5-pro-24gb.json) |
+| `qwen3-abliterated:8b` | abliterated | apache-2.0 | pick (16 GB writer, 16 GB reasoning, 24 GB writer) | [model-huihui-ai-qwen3-abliterated-8b](https://github.com/ronininc/kingmaker-brain-library/releases/tag/model-huihui-ai-qwen3-abliterated-8b) | 52.6 tok/s, holds 7.29 GB, tools 100%, route 92%, write 100% (m5-pro-24gb.json) |
 | `qwen3.5-abliterated:2b` | abliterated | apache-2.0 | pick (8 GB vision) | not yet | 129.9 tok/s, holds 2.99 GB, tools 83%, route 58%, write 67% (m5-pro-24gb-as-8gb.json) |
 | `qwen3.5-abliterated:4b` | abliterated | apache-2.0 | pick (16 GB vision, 24 GB vision, 32 GB vision, 48 GB vision) | not yet | 68.7 tok/s, holds 3.68 GB, tools 83%, route 75%, write 33% (m5-pro-24gb-as-8gb.json) |
 | `gemma3:4b` | stock | none on its card | option | pointer only | 81.5 tok/s, holds 3.97 GB, tools 94%, route 83%, write 100% (m5-pro-24gb-as-8gb.json) |
@@ -139,6 +139,8 @@ kingmaker models library pull <tag>      # downloads the parts, checks every SHA
 kingmaker models setup --pack <class>    # a whole pack
 kingmaker models bench                   # measure this Mac; then: kingmaker models library submit
 ```
+
+Submissions are scanned, then reviewed by the owner: see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Each model keeps its own licence: see [NOTICE.md](NOTICE.md). A model without a licence on its card is listed and
 measured here, but its weights are not republished.
