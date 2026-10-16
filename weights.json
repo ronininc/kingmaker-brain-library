@@ -1,0 +1,43 @@
+{
+ "hf.co/mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M": {
+  "tag": "hf.co/mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M",
+  "release": "model-mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m",
+  "gguf": "mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m.gguf",
+  "sha256": "d8038445e83ebbf59d374ad0dd997865eb37ecde6459df676b85fadbee06a6d1",
+  "size": 2099502912,
+  "license": "apache-2.0",
+  "from": "huihui-ai/Huihui-granite-4.1-3b-abliterated",
+  "base": "ibm-granite/granite-4.1-3b",
+  "modelfile": "Modelfile",
+  "parts": [
+   {
+    "name": "mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m.gguf.part-000",
+    "size": 1900000000,
+    "sha256": "e963ce94ab8d7b6641da869ff11a602daf0439f7f9937bdc9474bfd30efed0f8"
+   },
+   {
+    "name": "mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m.gguf.part-001",
+    "size": 199502912,
+    "sha256": "2b087bb0e01a97752380e420061cc4392edd56c0c4fc93f92f5f7c7a206b9ade"
+   }
+  ]
+ },
+ "huihui_ai/qwen2.5-coder-abliterate:1.5b": {
+  "tag": "huihui_ai/qwen2.5-coder-abliterate:1.5b",
+  "release": "model-huihui-ai-qwen2.5-coder-abliterate-1.5b",
+  "gguf": "huihui-ai-qwen2.5-coder-abliterate-1.5b.gguf",
+  "sha256": "4f3f998aec583f3499649a004f86c89ca57b0121b0d88451535dcef6b6e668ac",
+  "size": 1117321376,
+  "license": "apache-2.0",
+  "from": "ollama huihui_ai/qwen2.5-coder-abliterate (the Hugging Face repo is gone)",
+  "base": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "modelfile": "Modelfile",
+  "parts": [
+   {
+    "name": "huihui-ai-qwen2.5-coder-abliterate-1.5b.gguf.part-000",
+    "size": 1117321376,
+    "sha256": "4f3f998aec583f3499649a004f86c89ca57b0121b0d88451535dcef6b6e668ac"
+   }
+  ]
+ }
+}

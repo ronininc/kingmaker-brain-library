@@ -1,8 +1,8 @@
 {
  "schema": "kingmaker.brain-library/1",
  "repo": "ronininc/kingmaker-brain-library",
- "updatedAt": "2026-10-15T22:33:38.842Z",
- "source": "ronininc/Kingmaker sol-ghost a15977b",
+ "updatedAt": "2026-10-16T01:11:09.672Z",
+ "source": "ronininc/Kingmaker sol-ghost 9c3298c",
  "devices": [
   {
    "id": "m1-8gb",
@@ -527,14 +527,14 @@
     "writer": "huihui_ai/qwen3-abliterated:8b",
     "coder": "huihui_ai/qwen2.5-coder-abliterate:7b",
     "vision": "huihui_ai/qwen3.5-abliterated:4b",
-    "reasoning": "hf.co/mradermacher/Qwen3.8-9B-heretic-uncensored-i1-GGUF:i1-Q4_K_M"
+    "reasoning": "hf.co/TrevorJS/gemma-4-12B-it-uncensored-GGUF:Q4_K_M"
    },
    "maxResidentGb": 11,
    "context": 16384,
    "concurrent": 2,
    "voice": "on",
    "pictures": true,
-   "downloadGb": 19.7,
+   "downloadGb": 21.5,
    "basis": "measured on the M5 Pro 24 GB (catalog/bench/m5-pro-24gb.json)",
    "status": "measured",
    "measuredOn": [
@@ -615,6 +615,13 @@
    "kind": "stock",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "completion",
+    "vision",
+    "audio",
+    "tools",
+    "thinking"
+   ],
    "picks": [
     {
      "class": 64,
@@ -652,6 +659,10 @@
    "kind": "abliterated",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "tools"
+   ],
    "picks": [
     {
      "class": 8,
@@ -686,7 +697,29 @@
      "simulatedAsGb": 8
     }
    ],
-   "weights": null
+   "weights": {
+    "tag": "hf.co/mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M",
+    "release": "model-mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m",
+    "gguf": "mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m.gguf",
+    "sha256": "d8038445e83ebbf59d374ad0dd997865eb37ecde6459df676b85fadbee06a6d1",
+    "size": 2099502912,
+    "license": "apache-2.0",
+    "from": "huihui-ai/Huihui-granite-4.1-3b-abliterated",
+    "base": "ibm-granite/granite-4.1-3b",
+    "modelfile": "Modelfile",
+    "parts": [
+     {
+      "name": "mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m.gguf.part-000",
+      "size": 1900000000,
+      "sha256": "e963ce94ab8d7b6641da869ff11a602daf0439f7f9937bdc9474bfd30efed0f8"
+     },
+     {
+      "name": "mradermacher-huihui-granite-4.1-3b-abliterated-i1-gguf-i1-q4-k-m.gguf.part-001",
+      "size": 199502912,
+      "sha256": "2b087bb0e01a97752380e420061cc4392edd56c0c4fc93f92f5f7c7a206b9ade"
+     }
+    ]
+   }
   },
   {
    "tag": "hf.co/mradermacher/Qwen3-Coder-30B-A3B-Instruct-Heretic-i1-GGUF:i1-IQ3_M",
@@ -697,6 +730,7 @@
    "kind": "uncensored",
    "redistributable": false,
    "note": null,
+   "capabilities": null,
    "picks": [
     {
      "class": 32,
@@ -724,6 +758,7 @@
    "kind": "uncensored",
    "redistributable": false,
    "note": null,
+   "capabilities": null,
    "picks": [
     {
      "class": 32,
@@ -759,11 +794,12 @@
    "kind": "heretic",
    "redistributable": false,
    "note": "No licence on its model card: listed and measured, weights not republished.",
+   "capabilities": [
+    "tools",
+    "thinking",
+    "completion"
+   ],
    "picks": [
-    {
-     "class": 24,
-     "role": "reasoning"
-    },
     {
      "class": 32,
      "role": "writer"
@@ -792,6 +828,47 @@
    "weights": null
   },
   {
+   "tag": "hf.co/TrevorJS/gemma-4-12B-it-uncensored-GGUF:Q4_K_M",
+   "slug": "trevorjs-gemma-4-12b-it-uncensored-gguf-q4-k-m",
+   "from": "TrevorJS/gemma-4-12B-it-uncensored",
+   "base": "Gemma 4 12B",
+   "license": "apache-2.0",
+   "kind": "uncensored",
+   "redistributable": true,
+   "note": null,
+   "capabilities": [
+    "tools",
+    "completion"
+   ],
+   "picks": [
+    {
+     "class": 24,
+     "role": "reasoning"
+    }
+   ],
+   "status": "pick",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 32.7,
+     "loadS": 4.16,
+     "holdsGb": 8.39,
+     "tools": 100,
+     "nativeTools": 67,
+     "route": 100,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
    "tag": "huihui_ai/qwen2.5-coder-abliterate:1.5b",
    "slug": "huihui-ai-qwen2.5-coder-abliterate-1.5b",
    "from": "ollama huihui_ai/qwen2.5-coder-abliterate (the Hugging Face repo is gone)",
@@ -800,6 +877,11 @@
    "kind": "abliterated",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "insert"
+   ],
    "picks": [
     {
      "class": 8,
@@ -826,7 +908,24 @@
      "simulatedAsGb": 8
     }
    ],
-   "weights": null
+   "weights": {
+    "tag": "huihui_ai/qwen2.5-coder-abliterate:1.5b",
+    "release": "model-huihui-ai-qwen2.5-coder-abliterate-1.5b",
+    "gguf": "huihui-ai-qwen2.5-coder-abliterate-1.5b.gguf",
+    "sha256": "4f3f998aec583f3499649a004f86c89ca57b0121b0d88451535dcef6b6e668ac",
+    "size": 1117321376,
+    "license": "apache-2.0",
+    "from": "ollama huihui_ai/qwen2.5-coder-abliterate (the Hugging Face repo is gone)",
+    "base": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "modelfile": "Modelfile",
+    "parts": [
+     {
+      "name": "huihui-ai-qwen2.5-coder-abliterate-1.5b.gguf.part-000",
+      "size": 1117321376,
+      "sha256": "4f3f998aec583f3499649a004f86c89ca57b0121b0d88451535dcef6b6e668ac"
+     }
+    ]
+   }
   },
   {
    "tag": "huihui_ai/qwen2.5-coder-abliterate:7b",
@@ -837,6 +936,11 @@
    "kind": "abliterated",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "insert"
+   ],
    "picks": [
     {
      "class": 16,
@@ -878,6 +982,11 @@
    "kind": "abliterated",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+   ],
    "picks": [
     {
      "class": 16,
@@ -948,6 +1057,11 @@
    "kind": "abliterated",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+   ],
    "picks": [
     {
      "class": 16,
@@ -993,6 +1107,12 @@
    "kind": "abliterated",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "vision",
+    "tools",
+    "thinking"
+   ],
    "picks": [
     {
      "class": 8,
@@ -1030,6 +1150,12 @@
    "kind": "abliterated",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "vision",
+    "tools",
+    "thinking"
+   ],
    "picks": [
     {
      "class": 16,
@@ -1088,6 +1214,81 @@
    "weights": null
   },
   {
+   "tag": "gemma3:4b",
+   "slug": "gemma3-4b",
+   "from": "ollama gemma3:4b",
+   "base": null,
+   "license": null,
+   "kind": "stock",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion",
+    "vision"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 81.5,
+     "loadS": 2.08,
+     "holdsGb": 3.97,
+     "tools": 94,
+     "nativeTools": 0,
+     "route": 83,
+     "write": 100,
+     "fits": false,
+     "why": "holds 3.97 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "gemma4:e2b",
+   "slug": "gemma4-e2b",
+   "from": "ollama gemma4:e2b",
+   "base": null,
+   "license": null,
+   "kind": "stock",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion",
+    "vision",
+    "audio",
+    "tools",
+    "thinking"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 93,
+     "loadS": 3.09,
+     "holdsGb": 4.7,
+     "tools": 100,
+     "nativeTools": 100,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 4.7 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
    "tag": "granite4.1:3b",
    "slug": "granite4.1-3b",
    "from": "ollama library granite4.1:3b",
@@ -1096,6 +1297,10 @@
    "kind": "stock",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "tools"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1120,6 +1325,290 @@
    "weights": null
   },
   {
+   "tag": "hf.co/Abiray/Huihui-Ministral-3B-Instruct-2512-abliterated-GGUF:Q4_K_M",
+   "slug": "abiray-huihui-ministral-3b-instruct-2512-abliterated-gguf-q4-k-m",
+   "from": "Abiray/Huihui-Ministral-3B-Instruct-2512-abliterated-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "tools",
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 97.7,
+     "loadS": 1.16,
+     "holdsGb": 2.6,
+     "tools": 72,
+     "nativeTools": 72,
+     "route": 92,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/bartowski/Dolphin3.0-Llama3.1-8B-GGUF:Q8_0",
+   "slug": "bartowski-dolphin3.0-llama3.1-8b-gguf-q8-0",
+   "from": "bartowski/Dolphin3.0-Llama3.1-8B-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "stock",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 31.6,
+     "loadS": 3.45,
+     "holdsGb": 10.16,
+     "tools": 94,
+     "nativeTools": 0,
+     "route": 83,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/gemma-4-26B-A4B-it-uncensored-i1-GGUF:i1-IQ3_M",
+   "slug": "mradermacher-gemma-4-26b-a4b-it-uncensored-i1-gguf-i1-iq3-m",
+   "from": "mradermacher/gemma-4-26B-A4B-it-uncensored-i1-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "tools",
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 71.6,
+     "loadS": 8.11,
+     "holdsGb": 12.44,
+     "tools": 83,
+     "nativeTools": 72,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 12.82 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/gemma-4-26B-A4B-it-uncensored-i1-GGUF:i1-IQ4_XS",
+   "slug": "mradermacher-gemma-4-26b-a4b-it-uncensored-i1-gguf-i1-iq4-xs",
+   "from": "mradermacher/gemma-4-26B-A4B-it-uncensored-i1-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "tools",
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 70.6,
+     "loadS": 8.63,
+     "holdsGb": 14.09,
+     "tools": 83,
+     "nativeTools": 72,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 14.34 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/Huihui-Qwen3-14B-abliterated-v2-GGUF:Q4_K_M",
+   "slug": "mradermacher-huihui-qwen3-14b-abliterated-v2-gguf-q4-k-m",
+   "from": "mradermacher/Huihui-Qwen3-14B-abliterated-v2-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 28.1,
+     "loadS": 4.39,
+     "holdsGb": 5.95,
+     "tools": 100,
+     "nativeTools": 0,
+     "route": 100,
+     "write": 0,
+     "fits": false,
+     "why": "holds 11.97 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/Huihui-Qwen3-14B-abliterated-v2-GGUF:Q5_K_M",
+   "slug": "mradermacher-huihui-qwen3-14b-abliterated-v2-gguf-q5-k-m",
+   "from": "mradermacher/Huihui-Qwen3-14B-abliterated-v2-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 25.4,
+     "loadS": 3.88,
+     "holdsGb": 12.52,
+     "tools": 100,
+     "nativeTools": 0,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 12.8 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF:Q6_K",
+   "slug": "mradermacher-meta-llama-3.1-8b-instruct-abliterated-gguf-q6-k",
+   "from": "mradermacher/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 42,
+     "loadS": 1.68,
+     "holdsGb": 8.57,
+     "tools": 67,
+     "nativeTools": 0,
+     "route": 100,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/TrevorJS/gemma-4-E2B-it-uncensored-GGUF:Q4_K_M",
+   "slug": "trevorjs-gemma-4-e2b-it-uncensored-gguf-q4-k-m",
+   "from": "TrevorJS/gemma-4-E2B-it-uncensored-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "tools",
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 104.5,
+     "loadS": 2.08,
+     "holdsGb": 3.71,
+     "tools": 83,
+     "nativeTools": 100,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 3.71 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
    "tag": "hf.co/TrevorJS/gemma-4-E4B-it-uncensored-GGUF:Q4_K_M",
    "slug": "trevorjs-gemma-4-e4b-it-uncensored-gguf-q4-k-m",
    "from": "TrevorJS/gemma-4-E4B-it-uncensored-GGUF",
@@ -1128,9 +1617,30 @@
    "kind": "uncensored",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "tools",
+    "completion"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 62.4,
+     "loadS": 2.58,
+     "holdsGb": 6.33,
+     "tools": 83,
+     "nativeTools": 94,
+     "route": 92,
+     "write": 100,
+     "fits": false,
+     "why": "holds 6.33 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    },
     {
      "file": "m5-pro-24gb.json",
      "context": 16384,
@@ -1152,6 +1662,42 @@
    "weights": null
   },
   {
+   "tag": "hf.co/TrevorJS/gemma-4-E4B-it-uncensored-GGUF:Q8_0",
+   "slug": "trevorjs-gemma-4-e4b-it-uncensored-gguf-q8-0",
+   "from": "TrevorJS/gemma-4-E4B-it-uncensored-GGUF",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "tools",
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 45.7,
+     "loadS": 1.83,
+     "holdsGb": 8.02,
+     "tools": 78,
+     "nativeTools": 72,
+     "route": 100,
+     "write": 67,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
    "tag": "huihui_ai/deepseek-r1-abliterated:14b",
    "slug": "huihui-ai-deepseek-r1-abliterated-14b",
    "from": "ollama huihui_ai/deepseek-r1-abliterated:14b",
@@ -1160,6 +1706,11 @@
    "kind": "abliterated",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "tools",
+    "thinking",
+    "completion"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1174,7 +1725,7 @@
      "route": 0,
      "write": 100,
      "fits": false,
-     "why": "holds 11.56 GB > 11 GB",
+     "why": "holds 12.33 GB > 11 GB",
      "error": null,
      "host": "Apple M5 Pro",
      "ramGb": 24,
@@ -1192,6 +1743,11 @@
    "kind": "abliterated",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "tools",
+    "thinking",
+    "completion"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1216,6 +1772,42 @@
    "weights": null
   },
   {
+   "tag": "huihui_ai/llama3.2-abliterate:3b",
+   "slug": "huihui-ai-llama3.2-abliterate-3b",
+   "from": "ollama huihui_ai/llama3.2-abliterate:3b",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion",
+    "tools"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 109.9,
+     "loadS": 1.41,
+     "holdsGb": 3.01,
+     "tools": 72,
+     "nativeTools": 50,
+     "route": 92,
+     "write": 100,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
    "tag": "huihui_ai/qwen3-abliterated:0.6b",
    "slug": "huihui-ai-qwen3-abliterated-0.6b",
    "from": "huihui-ai/Qwen3-0.6B-abliterated",
@@ -1224,6 +1816,11 @@
    "kind": "abliterated",
    "redistributable": true,
    "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1248,6 +1845,155 @@
    "weights": null
   },
   {
+   "tag": "huihui_ai/qwen3-abliterated:14b",
+   "slug": "huihui-ai-qwen3-abliterated-14b",
+   "from": "ollama huihui_ai/qwen3-abliterated:14b",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 30,
+     "loadS": 3.39,
+     "holdsGb": 11.05,
+     "tools": 100,
+     "nativeTools": 94,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 11.82 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen3-abliterated:4b",
+   "slug": "huihui-ai-qwen3-abliterated-4b",
+   "from": "ollama huihui_ai/qwen3-abliterated:4b",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 91.4,
+     "loadS": 1.13,
+     "holdsGb": 3.31,
+     "tools": 78,
+     "nativeTools": 83,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 3.31 GB > 3.3 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "huihui_ai/qwen3.5-abliterated:0.8b",
+   "slug": "huihui-ai-qwen3.5-abliterated-0.8b",
+   "from": "ollama huihui_ai/qwen3.5-abliterated:0.8b",
+   "base": null,
+   "license": null,
+   "kind": "abliterated",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion",
+    "vision",
+    "tools",
+    "thinking"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb-as-8gb.json",
+     "context": 4096,
+     "tokS": 166.7,
+     "loadS": 1.24,
+     "holdsGb": 2.27,
+     "tools": 67,
+     "nativeTools": 61,
+     "route": 50,
+     "write": 67,
+     "fits": true,
+     "why": null,
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": 8
+    }
+   ],
+   "weights": null
+  },
+  {
+   "tag": "local/gemma-4-31b-it-heretic.i1-iq3_m",
+   "slug": "local-gemma-4-31b-it-heretic.i1-iq3-m",
+   "from": "ollama local/gemma-4-31b-it-heretic.i1-iq3_m",
+   "base": null,
+   "license": null,
+   "kind": "uncensored",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 12.1,
+     "loadS": 6.26,
+     "holdsGb": 15.9,
+     "tools": 100,
+     "nativeTools": 72,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 15.9 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
    "tag": "local/gemma-4-e4b-it-ultra-uncensored-heretic-q4_k_m",
    "slug": "local-gemma-4-e4b-it-ultra-uncensored-heretic-q4-k-m",
    "from": "ollama local/gemma-4-e4b-it-ultra-uncensored-heretic-q4_k_m",
@@ -1256,6 +2002,11 @@
    "kind": "uncensored",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1288,6 +2039,10 @@
    "kind": "uncensored",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "tools",
+    "completion"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1302,7 +2057,7 @@
      "route": 100,
      "write": 100,
      "fits": false,
-     "why": "swap grew 418 MB",
+     "why": "holds 15.22 GB > 11 GB",
      "error": null,
      "host": "Apple M5 Pro",
      "ramGb": 24,
@@ -1320,6 +2075,11 @@
    "kind": "uncensored",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "tools",
+    "thinking",
+    "completion"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1352,6 +2112,11 @@
    "kind": "uncensored",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "tools",
+    "thinking",
+    "completion"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1366,7 +2131,7 @@
      "route": 100,
      "write": 100,
      "fits": false,
-     "why": "holds 14.75 GB > 11 GB",
+     "why": "holds 15.79 GB > 11 GB",
      "error": null,
      "host": "Apple M5 Pro",
      "ramGb": 24,
@@ -1384,6 +2149,11 @@
    "kind": "uncensored",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "tools",
+    "thinking",
+    "completion"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1408,6 +2178,43 @@
    "weights": null
   },
   {
+   "tag": "local/rvn-iq4_xs-mtp",
+   "slug": "local-rvn-iq4-xs-mtp",
+   "from": "ollama local/rvn-iq4_xs-mtp",
+   "base": null,
+   "license": null,
+   "kind": "stock",
+   "redistributable": false,
+   "note": null,
+   "capabilities": [
+    "tools",
+    "thinking",
+    "completion"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [
+    {
+     "file": "m5-pro-24gb.json",
+     "context": 16384,
+     "tokS": 15.5,
+     "loadS": 5.54,
+     "holdsGb": 9.47,
+     "tools": 100,
+     "nativeTools": 78,
+     "route": 100,
+     "write": 100,
+     "fits": false,
+     "why": "holds 16.36 GB > 11 GB",
+     "error": null,
+     "host": "Apple M5 Pro",
+     "ramGb": 24,
+     "simulatedAsGb": null
+    }
+   ],
+   "weights": null
+  },
+  {
    "tag": "ministral-3:3b",
    "slug": "ministral-3-3b",
    "from": "ollama ministral-3:3b",
@@ -1416,6 +2223,11 @@
    "kind": "stock",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "completion",
+    "vision",
+    "tools"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
@@ -1448,6 +2260,12 @@
    "kind": "stock",
    "redistributable": false,
    "note": null,
+   "capabilities": [
+    "completion",
+    "vision",
+    "tools",
+    "thinking"
+   ],
    "picks": [],
    "status": "option",
    "bench": [
