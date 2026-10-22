@@ -1,7 +1,7 @@
 {
  "schema": "kingmaker.brain-library/1",
  "repo": "ronininc/kingmaker-brain-library",
- "updatedAt": "2026-10-16T07:35:02.265Z",
+ "updatedAt": "2026-10-21T23:56:58.000Z",
  "source": "ronininc/Kingmaker sol-ghost 989be97",
  "devices": [
   {
@@ -476,7 +476,7 @@
  "classes": [
   {
    "class": 8,
-   "pack": "8 GB · Lean",
+   "pack": "8 GB \u00b7 Lean",
    "label": "8 GB standard (M1/M2/M3 base)",
    "roles": {
     "router": "hf.co/mradermacher/Huihui-granite-4.1-3b-abliterated-i1-GGUF:i1-Q4_K_M",
@@ -500,7 +500,7 @@
   },
   {
    "class": 16,
-   "pack": "16 GB · Standard",
+   "pack": "16 GB \u00b7 Standard",
    "label": "16 GB (and 18 GB M3 Pro)",
    "roles": {
     "router": "huihui_ai/qwen3-abliterated:1.7b",
@@ -523,7 +523,7 @@
   },
   {
    "class": 24,
-   "pack": "24 GB · Full",
+   "pack": "24 GB \u00b7 Full",
    "label": "24 GB (M2/M3/M4/M5, M4/M5 Pro)",
    "roles": {
     "router": "huihui_ai/qwen3-abliterated:1.7b",
@@ -546,7 +546,7 @@
   },
   {
    "class": 32,
-   "pack": "32 GB · Pro",
+   "pack": "32 GB \u00b7 Pro",
    "label": "32 GB (and 36 GB M3 Pro / M4 Max / M5 Max)",
    "roles": {
     "router": "huihui_ai/qwen3-abliterated:1.7b",
@@ -567,7 +567,7 @@
   },
   {
    "class": 48,
-   "pack": "48 GB · Studio",
+   "pack": "48 GB \u00b7 Studio",
    "label": "48 GB (M3 Max, M4 Pro/Max, M5 Pro/Max)",
    "roles": {
     "router": "huihui_ai/qwen3-abliterated:1.7b",
@@ -588,7 +588,7 @@
   },
   {
    "class": 64,
-   "pack": "64 GB · Max",
+   "pack": "64 GB \u00b7 Max",
    "label": "64 GB and up (Max, Ultra, Studio)",
    "roles": {
     "router": "huihui_ai/qwen3-abliterated:1.7b",
@@ -2706,7 +2706,7 @@
     }
    ],
    "runtime": "Not Ollama: antirez's ds4 engine, or a llama.cpp build with DeepSeek V4 support.",
-   "note": "For 192–256 GB Macs (M2 Ultra 192 GB, M3 Ultra 256 GB): ds4-Q2 or Q4_K.",
+   "note": "For 192\u2013256 GB Macs (M2 Ultra 192 GB, M3 Ultra 256 GB): ds4-Q2 or Q4_K.",
    "slug": "huihui-deepseek-v4-flash-abliterated",
    "status": "option",
    "basis": "estimate",
@@ -2739,7 +2739,7 @@
     }
    ],
    "runtime": "Not Ollama: a llama.cpp or vLLM build with Kimi K3 support; Moonshot suggests ~64 accelerators to serve.",
-   "note": "Custom \"Kimi K3 License\": open-weight, not open source (resale / revenue-share terms), so a pointer only — weights are never republished here. No abliterated build exists yet. The smallest quant (466 GB) nominally fits a 512 GB M3 Ultra but leaves too little for macOS and a real 1M-token context; the intended home is the owner's planned NVIDIA DGX Spark + M5 Studio rig. Weights released 2026-07-27.",
+   "note": "Custom \"Kimi K3 License\": open-weight, not open source (resale / revenue-share terms), so a pointer only \u2014 weights are never republished here. No abliterated build exists yet. The smallest quant (466 GB) nominally fits a 512 GB M3 Ultra but leaves too little for macOS and a real 1M-token context; the intended home is the owner's planned NVIDIA DGX Spark + M5 Studio rig. Weights released 2026-07-27.",
    "slug": "kimi-k3",
    "status": "option",
    "basis": "estimate",
@@ -2748,6 +2748,38 @@
    "links": [
     "https://huggingface.co/moonshotai/Kimi-K3",
     "https://huggingface.co/unsloth/Kimi-K3-GGUF"
+   ]
+  },
+  {
+   "tag": "penclaw-GLM-5.3-abliterated",
+   "kind": "abliterated",
+   "license": "mit",
+   "base": "zai-org/GLM-5.3",
+   "from": "audnai/penclaw-GLM-5.3-abliterated-for-offensive-cyber",
+   "params": "753B total (MoE); active count unverified",
+   "context": null,
+   "forRamGb": [
+    512
+   ],
+   "files": [
+    {
+     "quant": "FP8 safetensors, per variant (3 variants in repo: iter11_dense29_a1.4, iter12_max58_a1.4, iter4_span15_a1.4)",
+     "gb": 755.7
+    },
+    {
+     "quant": "INT4 (third-party estimate)",
+     "gb": 411
+    }
+   ],
+   "runtime": "Not Ollama, not any Mac: vLLM/SGLang-class serving on datacenter GPUs (INT4 still needs ~411 GB VRAM). No machine in the current fleet can hold it.",
+   "note": "Taken down by Hugging Face under its Content Policy: the repo (HF commit e8e68a646dce5bda37533d9e0074a3cb2d4be28c, last modified 2026-08-31) is disabled and was manually gated before that; file downloads return 401, so the weights cannot be fetched from Hugging Face and are NOT mirrored here. Whole repo is 2.27 TB. Checked Hugging Bay (huggingbay.xyz, the torrent registry) 2026-10-21: not in its catalog yet. Recorded with its pin so it is findable the day a lawful copy surfaces. Card license MIT. Flagged by @hatsunama, reel Dd9B5RbR11F.",
+   "slug": "penclaw-glm-5.3-abliterated",
+   "status": "option",
+   "basis": "estimate",
+   "redistributable": false,
+   "weights": null,
+   "links": [
+    "https://huggingface.co/audnai/penclaw-GLM-5.3-abliterated-for-offensive-cyber"
    ]
   }
  ],
