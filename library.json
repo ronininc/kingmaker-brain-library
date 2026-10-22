@@ -1,7 +1,7 @@
 {
  "schema": "kingmaker.brain-library/1",
  "repo": "ronininc/kingmaker-brain-library",
- "updatedAt": "2026-10-21T23:56:58.000Z",
+ "updatedAt": "2026-10-22T00:39:54.000Z",
  "source": "ronininc/Kingmaker sol-ghost 989be97",
  "devices": [
   {
@@ -2755,7 +2755,7 @@
    "kind": "abliterated",
    "license": "mit",
    "base": "zai-org/GLM-5.3",
-   "from": "audnai/penclaw-GLM-5.3-abliterated-for-offensive-cyber",
+   "from": "audnai/penclaw-GLM-5.3-abliterated",
    "params": "753B total (MoE); active count unverified",
    "context": null,
    "forRamGb": [
@@ -2772,14 +2772,16 @@
     }
    ],
    "runtime": "Not Ollama, not any Mac: vLLM/SGLang-class serving on datacenter GPUs (INT4 still needs ~411 GB VRAM). No machine in the current fleet can hold it.",
-   "note": "Taken down by Hugging Face under its Content Policy: the repo (HF commit e8e68a646dce5bda37533d9e0074a3cb2d4be28c, last modified 2026-08-31) is disabled and was manually gated before that; file downloads return 401, so the weights cannot be fetched from Hugging Face and are NOT mirrored here. Whole repo is 2.27 TB. Checked Hugging Bay (huggingbay.xyz, the torrent registry) 2026-10-21: not in its catalog yet. Recorded with its pin so it is findable the day a lawful copy surfaces. Card license MIT. Flagged by @hatsunama, reel Dd9B5RbR11F.",
+   "note": "Two repos. The reel's audnai/penclaw-GLM-5.3-abliterated-for-offensive-cyber was DISABLED by Hugging Face under its Content Policy (HF commit e8e68a646dce5bda37533d9e0074a3cb2d4be28c; file downloads return 401). The sibling audnai/penclaw-GLM-5.3-abliterated SURVIVES \u2014 not disabled, 1,703 downloads, HF commit 027ae98a6f9dc37093b26759d7b8dbbfed9a97f8, last modified 2026-09-02 \u2014 but is manually gated: the author approves each download, so the bytes are not freely fetchable. Hugging Bay catalogs the sibling (artifact hf-model-audnai-penclaw-glm-5-3-abliterated; its pin matches HF) but hosts 0 files for it as of 2026-10-21. Whole family ~2.27 TB across variants. Sourcing paths when wanted: HF access request through the author's gate, or a Hugging Bay ingest request. Card license MIT (disabled repo); sibling license unrecorded upstream. Flagged by @hatsunama, reel Dd9B5RbR11F.",
    "slug": "penclaw-glm-5.3-abliterated",
    "status": "option",
    "basis": "estimate",
    "redistributable": false,
    "weights": null,
    "links": [
-    "https://huggingface.co/audnai/penclaw-GLM-5.3-abliterated-for-offensive-cyber"
+    "https://huggingface.co/audnai/penclaw-GLM-5.3-abliterated-for-offensive-cyber",
+    "https://huggingface.co/audnai/penclaw-GLM-5.3-abliterated",
+    "https://huggingbay.xyz"
    ]
   }
  ],
