@@ -2802,7 +2802,7 @@
    "root": "MoneyPrinterTurbo-c8dbf96",
    "python": "3.11",
    "install": ["uv", "python", "install", "3.11", "&&", "uv", "sync", "--frozen", "--python", "3.11"],
-   "use": { "command": "sh", "args": ["webui.sh"], "url": "http://127.0.0.1:8501" },
+   "use": { "command": "sh", "args": ["webui.sh"], "url": "http://127.0.0.1:8510" },
    "credentials": "Provider credentials are optional and stay in the application config; Kingmaker never bundles them."
   }
  ],
