@@ -15,4 +15,4 @@ The weights published in this repo's releases keep their own licences:
 
 Apache-2.0: https://www.apache.org/licenses/LICENSE-2.0.
 
-The Brain Library's own catalog, schema, benchmarks, documentation, and library tooling are Copyright (c) 2026 Ronin Inc. and licensed under the PolyForm Noncommercial License 1.0.0 in [LICENSE](LICENSE). Third-party models, weights, and applications retain their own licenses; inclusion does not relicense them.
+The Brain Library's own catalog, schema, benchmarks, documentation, and library tooling are Copyright (c) 2026 Ronin Inc., all rights reserved, and require a paid entitlement or separate written agreement under [LICENSE](LICENSE). Third-party models, weights, and applications retain their own licenses; inclusion does not relicense them.

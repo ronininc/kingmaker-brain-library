@@ -17,7 +17,7 @@
       "type": "string"
     },
     "license": {
-      "const": "PolyForm-Noncommercial-1.0.0"
+      "const": "LicenseRef-Ronin-Paid"
     },
     "updatedAt": {
       "type": "string"
