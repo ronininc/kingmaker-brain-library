@@ -13,4 +13,6 @@ The weights published in this repo's releases keep their own licences:
 - `granite4.1:3b`: apache-2.0. From ollama library granite4.1:3b, based on ibm-granite/granite-4.1-3b. Changes: abliteration or quantization by the builders named, not by Ronin Inc.
 - `huihui_ai/qwen3-abliterated:0.6b`: apache-2.0. From huihui-ai/Qwen3-0.6B-abliterated, based on Qwen/Qwen3-0.6B. Changes: abliteration or quantization by the builders named, not by Ronin Inc.
 
-Apache-2.0: https://www.apache.org/licenses/LICENSE-2.0. The library's own files (library.json, the schema, the bench results) are published by Ronin Inc for anyone to use.
+Apache-2.0: https://www.apache.org/licenses/LICENSE-2.0.
+
+The Brain Library's own catalog, schema, benchmarks, documentation, and library tooling are Copyright (c) 2026 Ronin Inc. and licensed under the PolyForm Noncommercial License 1.0.0 in [LICENSE](LICENSE). Third-party models, weights, and applications retain their own licenses; inclusion does not relicense them.

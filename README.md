@@ -1,5 +1,7 @@
 # Kingmaker Brain Library
 
+The Brain Library's catalog, schema, benchmarks, documentation, and library tooling are source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE), the same license as Kingmaker. Third-party models, weights, and applications retain their own licenses as listed in [NOTICE.md](NOTICE.md).
+
 The local models [Kingmaker](https://github.com/ronininc/Kingmaker) suggests for every Apple-silicon Mac, the
 benchmarks behind each pick, and the weights. Abliterated and uncensored builds are preferred wherever one measured
 well. Machine-readable: [`library.json`](library.json) (schema: [`schema/library.schema.json`](schema/library.schema.json)).
