@@ -133,6 +133,14 @@ Listed for when a bigger Mac arrives. Never picked automatically, not benchmarke
 | [Huihui-DeepSeek-V4-Flash-abliterated](https://huggingface.co/huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF)<br><small>DeepSeek V4 Flash (MoE). For 192–256 GB Macs (M2 Ultra 192 GB, M3 Ultra 256 GB): ds4-Q2 or Q4_K.</small> | mit | 192 / 256 GB Macs | ds4-Q2 86.7 GB, Q2_K 99.7 GB, Q4_K 164.6 GB, MTP draft (speculative decoding) 3.8 GB | Not Ollama: antirez's ds4 engine, or a llama.cpp build with DeepSeek V4 support. |
 | [Kimi-K3](https://huggingface.co/moonshotai/Kimi-K3) · [GGUF](https://huggingface.co/unsloth/Kimi-K3-GGUF)<br><small>2.8T total, ~104B active per token (MoE: 896 experts, 16 + 2 shared); multimodal (MoonViT-V2), 1M tokens context. Custom "Kimi K3 License": open-weight, not open source (resale / revenue-share terms), so a pointer only — weights are never republished here. No abliterated build exists yet. The smallest quant (466 GB) nominally fits a 512 GB M3 Ultra but leaves too little for macOS and a real 1M-token context; the intended home is the owner's planned NVIDIA DGX Spark + M5 Studio rig. Weights released 2026-07-27.</small> | kimi-k3 | 512 GB Macs | UD-Q1_0 (community, Unsloth) 466 GB, UD-Q8_K_XL (full) 1560 GB | Not Ollama: a llama.cpp or vLLM build with Kimi K3 support; Moonshot suggests ~64 accelerators to serve. |
 
+## Applications
+
+Reviewed optional applications are pinned to an exact source revision and published as immutable Brain Library release assets. Kingmaker verifies the asset SHA-256, installs it outside the signed base app, and gives it an isolated runtime.
+
+| Application | Version | Licence | Source | Install and use |
+|---|---|---|---|---|
+| MoneyPrinterTurbo<br><small>Generate short videos from a topic, script, local media, or configured AI providers.</small> | 1.3.9+c8dbf96 | MIT | [commit c8dbf96e](https://github.com/harry0703/MoneyPrinterTurbo/commit/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de) | `kingmaker models library pull moneyprinterturbo`<br>`kingmaker models library use moneyprinterturbo` |
+
 ## Install a pick with Kingmaker
 
 ```

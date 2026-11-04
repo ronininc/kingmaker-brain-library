@@ -257,6 +257,42 @@
         }
       }
     },
+    "applications": {
+      "type": "array",
+      "description": "Reviewed optional applications downloaded and verified by Kingmaker.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "version", "kind", "license", "source", "sourceCommit", "release", "asset", "size", "sha256", "root", "python", "install", "use"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,40}$" },
+          "name": { "type": "string" },
+          "version": { "type": "string" },
+          "kind": { "const": "local-web-app" },
+          "summary": { "type": "string" },
+          "license": { "type": "string" },
+          "source": { "type": "string", "pattern": "^https://github\\.com/" },
+          "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+          "release": { "type": "string" },
+          "asset": { "type": "string" },
+          "size": { "type": "integer", "minimum": 1 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "root": { "type": "string" },
+          "python": { "type": "string" },
+          "install": { "type": "array", "items": { "type": "string" } },
+          "use": {
+            "type": "object",
+            "required": ["command", "args", "url"],
+            "properties": {
+              "command": { "const": "sh" },
+              "args": { "type": "array", "items": { "type": "string" } },
+              "url": { "type": "string", "pattern": "^http://127\\.0\\.0\\.1:" }
+            }
+          },
+          "credentials": { "type": "string" }
+        }
+      }
+    },
     "bench": {
       "type": "array",
       "items": {

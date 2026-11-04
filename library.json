@@ -2785,6 +2785,27 @@
    ]
   }
  ],
+ "applications": [
+  {
+   "id": "moneyprinterturbo",
+   "name": "MoneyPrinterTurbo",
+   "version": "1.3.9+c8dbf96",
+   "kind": "local-web-app",
+   "summary": "Generate short videos from a topic, script, local media, or configured AI providers.",
+   "license": "MIT",
+   "source": "https://github.com/harry0703/MoneyPrinterTurbo",
+   "sourceCommit": "c8dbf96e9dfee43b30f7c3f440175d6bd4de61de",
+   "release": "app-moneyprinterturbo-c8dbf96",
+   "asset": "moneyprinterturbo-c8dbf96.tar.gz",
+   "size": 140308297,
+   "sha256": "49ad90d90df5683d5cc9c688d9e2bbd40913b345c7501844842698c6ef9aa536",
+   "root": "MoneyPrinterTurbo-c8dbf96",
+   "python": "3.11",
+   "install": ["uv", "python", "install", "3.11", "&&", "uv", "sync", "--frozen", "--python", "3.11"],
+   "use": { "command": "sh", "args": ["webui.sh"], "url": "http://127.0.0.1:8501" },
+   "credentials": "Provider credentials are optional and stay in the application config; Kingmaker never bundles them."
+  }
+ ],
  "bench": [
   "m5-pro-24gb-as-8gb.json",
   "m5-pro-24gb.json",
