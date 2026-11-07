@@ -2,7 +2,7 @@
  "schema": "kingmaker.brain-library/1",
  "repo": "ronininc/kingmaker-brain-library",
  "license": "LicenseRef-Ronin-Paid",
- "updatedAt": "2026-10-22T00:39:54.000Z",
+ "updatedAt": "2026-11-07T22:16:49.000Z",
  "source": "ronininc/Kingmaker sol-ghost 989be97",
  "devices": [
   {
@@ -2625,6 +2625,24 @@
      "simulatedAsGb": 8
     }
    ],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/webAI-Official/TwIL-8B:Q4_K_M",
+   "slug": "webai-twil-8b-q4-k-m",
+   "from": "webAI-Official/TwIL-8B",
+   "base": "ibm-granite/granite-4.2-8b",
+   "license": "webai-non-commercial-1.0",
+   "kind": "stock",
+   "redistributable": false,
+   "note": "Owner-listed 2026-11-07 as a Kingmaker base brain (option; not yet measured locally). Vendor model-card scores (webAI self-run; no independent reproduction yet): LiveCodeBench 81.6 = 93% of the best published frontier score (Claude Opus 4.8 87.8, GPT-5.5 85.3, Grok 4.3 84.5); MATH-500 98.2; AIME 2025 88.3; IFBench ahead of Qwen3.5-9B by 9.9; knowledge rows weak (GPQA Diamond 70.2, HLE 12.6). Headline code and instruction scores are measured on the verbose variant: this entry's artifact is TwIL-8B-Q4_K_M-verbose.gguf (5,347,917,248 bytes); the balanced variant shares the repo and is unrun on those rows. Weights not mirrored: webAI Non-Commercial licence, intake via Hugging Bay + owner verification before any pull. Tool-calling unmeasured.",
+   "capabilities": [
+    "completion",
+    "thinking"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [],
    "weights": null
   }
  ],
