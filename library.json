@@ -2,7 +2,7 @@
  "schema": "kingmaker.brain-library/1",
  "repo": "ronininc/kingmaker-brain-library",
  "license": "LicenseRef-Ronin-Paid",
- "updatedAt": "2026-11-07T22:16:49.000Z",
+ "updatedAt": "2026-11-07T23:58:05.000Z",
  "source": "ronininc/Kingmaker sol-ghost 989be97",
  "devices": [
   {
@@ -2639,6 +2639,25 @@
    "capabilities": [
     "completion",
     "thinking"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/Arete-27B-i1-GGUF:i1-IQ4_XS",
+   "slug": "mradermacher-arete-27b-i1-gguf-i1-iq4-xs",
+   "from": "mradermacher/Arete-27B-i1-GGUF",
+   "base": "Qwen/Qwen3.8-27B",
+   "license": "apache-2.0",
+   "kind": "heretic",
+   "redistributable": true,
+   "note": "Owner-listed 2026-11-07 as a Kingmaker heretic-line candidate (option; not yet measured locally). Nous Research Arete-27B (released 2026-11-06): full-parameter SFT of Qwen/Qwen3.8-27B, language weights only, vision tower frozen; supervised fine-tuning only (about 52.8M tokens, 28,886 examples, teacher Inkling; training data published as NousResearch/arete-data-pairs), post-trained to counter CCP-framed answers across seven categories (freedom of expression, state ideology, state versus free market, education, data privacy and surveillance, democracy, environmental policy). Vendor eval (Nous-run Propaganda_Eval, 803 prompts judged by Grok 4.7 against Nous's rubric; fully published, no independent reproduction yet): fact mean 2.32 to 2.98, any-propaganda 22% to 0.9%; capability parity on Nous's own bench within noise; 27% of eval answers still scored zero-fact. Apache-2.0 on derivative and base. This entry's artifact is the mradermacher i1-IQ4_XS GGUF (15,082,508,128 bytes); the official repo is safetensors-only. Owner ruling 2026-11-07: intake is Heretic abliteration (input-side) - the Nous post-training is retained as context/provenance only and holds no authority under Kingmaker governance. Weights not mirrored: intake via Hugging Bay + owner verification before any pull. Tool-calling unmeasured.",
+   "capabilities": [
+    "completion",
+    "thinking",
+    "vision"
    ],
    "picks": [],
    "status": "option",
