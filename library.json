@@ -2,7 +2,7 @@
  "schema": "kingmaker.brain-library/1",
  "repo": "ronininc/kingmaker-brain-library",
  "license": "LicenseRef-Ronin-Paid",
- "updatedAt": "2026-11-07T23:58:05.000Z",
+ "updatedAt": "2026-11-08T01:35:26.000Z",
  "source": "ronininc/Kingmaker sol-ghost 989be97",
  "devices": [
   {
@@ -2658,6 +2658,103 @@
     "completion",
     "thinking",
     "vision"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/gpt-oss-20b-i1-GGUF:i1-IQ4_XS",
+   "slug": "mradermacher-gpt-oss-20b-i1-gguf-i1-iq4-xs",
+   "from": "mradermacher/gpt-oss-20b-i1-GGUF",
+   "base": "openai/gpt-oss-20b",
+   "license": "apache-2.0",
+   "kind": "stock",
+   "redistributable": true,
+   "note": "Owner-listed 2026-11-07 as a Kingmaker stock candidate (option; not yet measured locally). OpenAI gpt-oss-20b: 20.9B-parameter MoE (3.6B active), native MXFP4, Apache-2.0 with a LICENSE file in the repo. The card states function calling and tool use and chain-of-thought reasoning (card-stated; locally unmeasured). This entry's artifact is the mradermacher i1-IQ4_XS GGUF (12,096,480,512 bytes), matching the native MXFP4 footprint (about 12.1 GB). Contests class 32 reasoning/agent: challenges the Qwen3.6-27B heretic pick, whose own entry carries no bench and no weights. Weights not mirrored: intake via Hugging Bay + owner verification before any pull.",
+   "capabilities": [
+    "completion",
+    "thinking",
+    "tools"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/Qwen3.8-27B-i1-GGUF:i1-IQ4_XS",
+   "slug": "mradermacher-qwen3.8-27b-i1-gguf-i1-iq4-xs",
+   "from": "mradermacher/Qwen3.8-27B-i1-GGUF",
+   "base": "Qwen/Qwen3.8-27B",
+   "license": "apache-2.0",
+   "kind": "stock",
+   "redistributable": true,
+   "note": "Owner-listed 2026-11-07 as a Kingmaker stock candidate (option; not yet measured locally). Stock Qwen/Qwen3.8-27B: 27.8B dense, natively multimodal (card pipeline image-text-to-text), Apache-2.0 with a LICENSE file in the repo. The card states tool use (card-stated; locally unmeasured). This entry's artifact is the mradermacher i1-IQ4_XS GGUF (15,309,039,584 bytes), the same quant family as the Arete-27B entry so the derivative and its stock base bench comparably. This is the missing stock base of the library's flagship line: Arete-27B is a post-train of this exact model. Contests classes 32/48 writer, reasoning and vision: challenges the Qwen3.6-27B heretic picks and the Qwen3.5-abliterated-4B vision monoculture. Weights not mirrored: intake via Hugging Bay + owner verification before any pull.",
+   "capabilities": [
+    "completion",
+    "thinking",
+    "tools",
+    "vision"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/MiMo-V2.6-Distill-Qwen-9B-i1-GGUF:i1-Q4_K_M",
+   "slug": "mradermacher-mimo-v2.6-distill-qwen-9b-i1-gguf-i1-q4-k-m",
+   "from": "mradermacher/MiMo-V2.6-Distill-Qwen-9B-i1-GGUF",
+   "base": "Qwen/Qwen3.5-9B",
+   "license": "mit",
+   "kind": "stock",
+   "redistributable": false,
+   "note": "Owner-listed 2026-11-07 as a Kingmaker stock candidate (option; not yet measured locally). XiaomiMiMo MiMo-V2.6-Distill-Qwen-9B: 9.41B, an SFT distill of Qwen/Qwen3.5-9B, multimodal (card pipeline image-text-to-text); the card carries a tool-use tag and states thinking (card-stated; locally unmeasured). LICENCE FLAG: the card metadata declares MIT but the repo contains NO LICENSE file (verified against the repo tree on 2026-11-07), so the licence is unproven at the source and this entry is marked redistributable: false until the licence is proven from the repo itself; the base Qwen3.5-9B is Apache-2.0. Vendor figures (Xiaomi): SWE-Pro 44.6 versus the base model's 32.0. This entry's artifact is the mradermacher i1-Q4_K_M GGUF (5,629,106,144 bytes). Contests classes 16/24 writer and coder: challenges the Qwen3-abliterated-8B writer pick and the 2024-vintage Qwen2.5-Coder-7B coder pick. Weights not mirrored: intake via Hugging Bay + owner verification before any pull.",
+   "capabilities": [
+    "completion",
+    "thinking",
+    "tools",
+    "vision"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/mradermacher/Muse-Glimmer-30B-i1-GGUF:i1-IQ4_XS",
+   "slug": "mradermacher-muse-glimmer-30b-i1-gguf-i1-iq4-xs",
+   "from": "mradermacher/Muse-Glimmer-30B-i1-GGUF",
+   "base": "meta-models/Muse-Glimmer-30B",
+   "license": "apache-2.0",
+   "kind": "stock",
+   "redistributable": true,
+   "note": "Owner-listed 2026-11-07 as a Kingmaker stock candidate (option; not yet measured locally). Meta Muse Glimmer 30B (meta-models/Muse-Glimmer-30B): 29.6B dense with a vision encoder, agent-tuned with tool-loop and failure-recovery training; the card states function calling and tool use (card-stated; locally unmeasured) and multimodal input. Apache-2.0 with a LICENSE file in the repo. This entry's artifact is the mradermacher i1-IQ4_XS GGUF (15,218,433,344 bytes), sized to sit inside class 32's resident budget as well as class 48; the i1-Q4_K_M build is 16,935,295,296 bytes. Contests classes 32/48 writer, reasoning and vision: challenges the Qwen3.8-9B heretic writer pick and the Qwen3.5-abliterated-4B vision monoculture. Weights not mirrored: intake via Hugging Bay + owner verification before any pull.",
+   "capabilities": [
+    "completion",
+    "thinking",
+    "tools",
+    "vision"
+   ],
+   "picks": [],
+   "status": "option",
+   "bench": [],
+   "weights": null
+  },
+  {
+   "tag": "hf.co/bartowski/RecursiveSI_flint-GGUF:IQ4_XS",
+   "slug": "bartowski-recursivesi-flint-gguf-iq4-xs",
+   "from": "bartowski/RecursiveSI_flint-GGUF",
+   "base": "RecursiveSI/flint",
+   "license": "apache-2.0",
+   "kind": "stock",
+   "redistributable": true,
+   "note": "Owner-listed 2026-11-07 as a Kingmaker stock candidate (option; not yet measured locally). RecursiveSI Flint 40B: 39.8B-parameter MoE (2.5B active), a coding-agent specialist; the card states tool use (card-stated; locally unmeasured). Apache-2.0 with a LICENSE file in the repo. No mradermacher stock build exists, so this entry's artifact is the bartowski IQ4_XS GGUF (22,446,290,144 bytes), sized to fit class 48's resident budget; the bartowski Q4_K_M build (25,346,651,360 bytes) sits at or over that budget and is class-64-safe only. Contests class 48 coder (class 64 safe): challenges the Qwen3-Coder-30B heretic pick, whose own entry carries no bench and no weights. Weights not mirrored: intake via Hugging Bay + owner verification before any pull.",
+   "capabilities": [
+    "completion",
+    "tools"
    ],
    "picks": [],
    "status": "option",
