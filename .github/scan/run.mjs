@@ -1,36 +1,34 @@
-// The Brain Library's pull-request scan, as the library repo runs it (.github/scan/run.mjs, copied there by
-// `node scripts/brain-library.mjs build`). The workflow checks out the library's own main, never the submission, so the
-// scan that runs is always the owner's: the submitted files are fetched from GitHub's API as text and only read
-// (lib/library-scan.mjs scanSubmission), never run. A failing scan fails the check and says why on the pull request's
-// summary; a passing one only makes it ready for the owner's review.
+// Only the trusted base branch runs this module. PR files are fixed-repository GitHub blobs read as inert data.
 import { appendFileSync } from 'node:fs';
-import { scanSubmission, MAX_FILE_BYTES } from './library-scan.mjs';
+import { githubData } from './github-data.mjs';
+import { scanLibrarySubmission } from './submission-scan.mjs';
+import { MAX_FILE_BYTES } from './library-scan.mjs';
+import { REFERENCE_FILES, isReferencePath } from './reference-scan.mjs';
+const {GH_TOKEN,REPO,PR,GITHUB_STEP_SUMMARY}=process.env;
+if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(REPO||'')||!/^\d{1,12}$/.test(PR||''))throw new Error('Invalid trusted repository/PR coordinates');
 
-const { GH_TOKEN, REPO, PR, GITHUB_STEP_SUMMARY } = process.env;
-const api = (path, accept = 'application/vnd.github+json') => fetch(`https://api.github.com/${path}`, {
-  headers: { authorization: `Bearer ${GH_TOKEN}`, accept, 'x-github-api-version': '2022-11-28', 'user-agent': 'kingmaker-brain-library-scan' },
-});
-
-const files = [];
-for (let page = 1; page <= 3; page += 1) {
-  const r = await api(`repos/${REPO}/pulls/${PR}/files?per_page=100&page=${page}`);
-  if (!r.ok) { console.error(`could not list the pull request's files (${r.status})`); process.exit(1); }
-  const batch = await r.json();
-  files.push(...batch);
-  if (batch.length < 100) break;
-}
-for (const f of files.slice(0, 21)) {
-  if (f.status !== 'added' || !f.raw_url || f.changes > 50_000) continue;
-  const r = await fetch(f.raw_url, { headers: { authorization: `Bearer ${GH_TOKEN}` } });
-  if (!r.ok) continue;
-  const buf = Buffer.from(await r.arrayBuffer());
-  f.content = buf.length > MAX_FILE_BYTES ? ' '.repeat(MAX_FILE_BYTES + 1) : buf.toString('utf8');
-}
-
-const { ok, problems } = scanSubmission(files);
-const report = ok
-  ? `### ✓ Scan passed\n\n${files.length} new bench file(s). Ready for the owner's review; nothing is merged automatically.\n`
-  : `### ✗ Scan failed\n\n${problems.map((p) => `- ${p}`).join('\n')}\n\nOnly new bench results from \`kingmaker models bench\` can be submitted (see CONTRIBUTING.md).\n`;
-console.log(report);
-if (GITHUB_STEP_SUMMARY) appendFileSync(GITHUB_STEP_SUMMARY, report);
-process.exit(ok ? 0 : 1);
+try{
+ const github=githubData({repository:REPO,token:GH_TOKEN});
+ const pr=await github.pull(PR);
+ if(!/^[a-f0-9]{40}$/.test(pr.head?.sha||'')||!Number.isSafeInteger(pr.changed_files)||pr.changed_files<1||pr.changed_files>20)throw new Error('Submission exceeds file budget or lacks immutable head');
+ const files=await github.files(PR);
+ if(!Array.isArray(files)||files.length!==pr.changed_files)throw new Error('Incomplete PR file listing');
+ const references=files.every(f=>isReferencePath(f.filename));
+ const snapshot={};
+ if(references){
+  const tree=await github.tree(pr.head.sha);
+  if(tree.truncated||!Array.isArray(tree.tree)||tree.tree.length>10000)throw new Error('Reference tree cannot be bounded');
+  for(const name of REFERENCE_FILES){
+   const item=tree.tree.find(x=>x.path===name);
+   if(!item||item.type!=='blob'||item.mode!=='100644'||item.size>MAX_FILE_BYTES)throw new Error('Required reference is missing, executable, oversized or a link');
+   snapshot[name]=await github.blob(item.sha);
+  }
+  for(const f of files){const item=tree.tree.find(x=>x.path===f.filename);if(item.sha!==f.sha)throw new Error('PR changed while obtaining immutable reference snapshot');f.mode=item.mode;f.content=snapshot[f.filename];}
+ }else{
+  // The unchanged bench validator rejects all other paths before content is needed.
+  for(const f of files)if(f.status==='added'&&/^bench\//.test(f.filename))f.content=await github.blob(f.sha);
+ }
+ const {ok,problems,lane}=scanLibrarySubmission(files,snapshot);
+ const report=ok?`### Scan passed\n\n${files.length} ${lane} file(s) passed bounded data checks. Owner review is still required; nothing installs or merges automatically.\n`:`### Scan failed\n\n${problems.map(p=>`- ${p}`).join('\n')}\n\nSee CONTRIBUTING.md. Scanner/workflow policy changes cannot authorize themselves.\n`;
+ console.log(report);if(GITHUB_STEP_SUMMARY)appendFileSync(GITHUB_STEP_SUMMARY,report);process.exitCode=ok?0:1;
+}catch(error){console.error(`Scan failed closed: ${error.message}`);process.exitCode=1;}
