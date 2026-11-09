@@ -20,6 +20,8 @@ jobs:
         with:
           persist-credentials: false
           sparse-checkout: .github/scan
+      - name: Test the trusted data validators
+        run: node --test .github/scan/reference-scan.test.mjs
       - name: Scan the submission (read as data, never run)
         run: node .github/scan/run.mjs
         env:
