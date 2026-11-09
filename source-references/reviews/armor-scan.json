@@ -1,0 +1,1142 @@
+{
+  "armor": "installed Scripture Armor scanner",
+  "summary": {
+    "scanned": 33,
+    "code": 17,
+    "data": 16,
+    "needs_owner": 1,
+    "notes": 3,
+    "verdict": "needs-owner"
+  },
+  "results": [
+    {
+      "file": "work/brain-library-review/quarantine/3DTopia/threefiner/LICENSE",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:02.611Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/3DTopia/threefiner/gradio_app.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "edb4cb9a8b323c0e26b3080ab76e25604545536aa995ab6958f5da6b2a0e3541",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:02.709Z",
+      "duration_ms": 3,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "gradio_app.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/3DTopia/threefiner/readme.md",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "b66a3d263f2dc6fe884d2030f4650010ac23cdfa5881536d34e6986ae39dd1ef",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:02.764Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/3DTopia/threefiner/setup.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "2071fa63945d88c9970c84e1521b9efd25f903fb36db2e910b6272f73f569af6",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:02.803Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "setup.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Microsoft/TRELLIS/LICENSE",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:02.843Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Microsoft/TRELLIS/README.md",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "675a1bab7837d22972a776dec8e2a2eb01f9211bd40b4c57112a8335ccb9ec3e",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:02.882Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Microsoft/TRELLIS/app.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "7f1e8c7bcd672615f6f53170d1e4c44cc349db03397671fc054678e8b917db7e",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:02.922Z",
+      "duration_ms": 2,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "app.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Microsoft/TRELLIS/setup.sh",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "e536f1152eb8243dc59d818d3db9eddc1818486a1c4823657331165fbd2ca553",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:02.965Z",
+      "duration_ms": 2,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "setup.sh",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        },
+        {
+          "rule": "src-shell-eval",
+          "severity": "high",
+          "basis": "pattern",
+          "location": "setup.sh:4",
+          "detail": "shell eval of a constructed string",
+          "excerpt_sha256": "f09380c650ce6a415b3c96cf26ad9a28df79b7b262680cb66f37f7ae4c1b40db"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "warn",
+      "risk": {
+        "score": 15,
+        "tier": 1,
+        "drivers": [
+          "src-shell-eval"
+        ]
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Tencent/Hunyuan3D-2/LICENSE",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "94259df223918a5733677965c1bfe1774a2dba25042d9c3b47a3418ea6c1f324",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.008Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Tencent/Hunyuan3D-2/README.md",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "edc4d006b977c8e28a0d3135ffc22b0dcad8e8dcb31fc9152c906eb21e29a886",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.046Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Tencent/Hunyuan3D-2/api_server.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "bf08d183f8e7715171c85da1c76b313ef41fd30d75d689796d08a25fc55f9373",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.083Z",
+      "duration_ms": 2,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "api_server.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Tencent/Hunyuan3D-2/requirements.txt",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "b09104f55ee2f22438b2944b164125e88a0366a3434d703aa3f33115e1b21632",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.122Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "requirements.txt",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        },
+        {
+          "rule": "dependency-inventory",
+          "severity": "info",
+          "basis": "inventory",
+          "location": "requirements.txt",
+          "detail": "21 declared requirements (inventory only)"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 2
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/Tencent/Hunyuan3D-2/setup.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "2823bb49411646de1da85a1b3b16152690a66c5f376947adb7f68d3d6b2755ad",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.161Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "setup.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/VAST-AI-Research/TripoSR/LICENSE",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "ade0a66629bdd7e01e46b3296b3851cff0fd27989bca53da470ad6e96ed620fb",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.202Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/VAST-AI-Research/TripoSR/README.md",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "ed40f078c5e451c58eae716187e0128f0ce8575e467aab2440b4ed9c75e490b9",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.240Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/VAST-AI-Research/TripoSR/gradio_app.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "966639162b0e54b8d02748968e77c90aec38bbc123aa5db2d1d81eb92fda9f80",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.278Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "gradio_app.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/VAST-AI-Research/TripoSR/requirements.txt",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "741408247598c63e9f08cdb5f6fc753d78ac9185bb961cbe7ba8c5c0132aae48",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.317Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "requirements.txt",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        },
+        {
+          "rule": "dependency-inventory",
+          "severity": "info",
+          "basis": "inventory",
+          "location": "requirements.txt",
+          "detail": "12 declared requirements (inventory only)"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 2
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/VAST-AI-Research/TripoSR/run.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "bc1c124b3439f8ceb00ebd441848487ae7650af71053a80b266ae5db15784282",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.356Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "run.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/VAST-AI-Research/TripoSR/tsr/system.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "7aec93e421394ad7c746b6d63a0189532b57b26af9a199fc75ac3bb7c993c94f",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.400Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "system.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/harry0703/MoneyPrinterTurbo/LICENSE",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "87dd19b6a0779e14a91c1b06423ef251df37e89666160c031130a26bae68c229",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.440Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/harry0703/MoneyPrinterTurbo/README-en.md",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "8dd6fb0e47120b2d7fd89818c56551ccb07bd3f60cde5bc6861cf4e87b3b607a",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.479Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/harry0703/MoneyPrinterTurbo/app/asgi.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "9b741b336f605f7159d519d9bbc9b33bf48337039feaa25ac644bc1b02821760",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.517Z",
+      "duration_ms": 2,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "asgi.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/harry0703/MoneyPrinterTurbo/app/services/llm.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "8cb34305fa563ddfe9bd01b70648680c38bd872c7fbdc3470645e4fa64cf84cc",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.556Z",
+      "duration_ms": 5,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "llm.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/harry0703/MoneyPrinterTurbo/config.example.toml",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "6eadd4e7002443c992d62cde74d19a8bf20fe1a69a10930bd65ac5fe083af61c",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.606Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/harry0703/MoneyPrinterTurbo/docker-compose.yml",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "0f0f2c6b47150974fece34eb6b83eb384695b07d875eb7fc7236ee7a99c71d7e",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.646Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/harry0703/MoneyPrinterTurbo/main.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "b28cbb202c7cb4c972e1fc702f8315c32de57c57e130b4e4d12cfc81d8061854",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.685Z",
+      "duration_ms": 2,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "main.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/harry0703/MoneyPrinterTurbo/requirements.txt",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "d19ab95b30689d9da8c693646e84bd6c002f1771ee7f8432d49bc65dcaa89f6b",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.733Z",
+      "duration_ms": 2,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "requirements.txt",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        },
+        {
+          "rule": "dependency-inventory",
+          "severity": "info",
+          "basis": "inventory",
+          "location": "requirements.txt",
+          "detail": "28 declared requirements (inventory only)"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 2
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/lllyasviel/ControlNet/LICENSE",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.778Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/lllyasviel/ControlNet/README.md",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "c2cc1b1620119b50bcce16903a83b50366cdba7600732720432aad6eb4d55e39",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.819Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/lllyasviel/ControlNet/cldm/model.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "d6505ff713cded0b7db34f403d7684df08d07574213ce16e7c89585f6453a0ca",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.860Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "model.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/lllyasviel/ControlNet/environment.yaml",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "c31c748f0347d9c2e201ad38206bd75f6a55f1064ea4189efc072e32d119a3e0",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.899Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/lllyasviel/ControlNet/gradio_canny2image.py",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "773217407b1ddc9ec9f52ea5179f35303aee53d594c7807c422ec1bf4a87eeda",
+      "target_class": "source",
+      "engine": {
+        "name": "scripture-lexical",
+        "version": "scripture-lexical/1",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.940Z",
+      "duration_ms": 1,
+      "analysis_confidence": "full",
+      "findings": [
+        {
+          "rule": "source-lane-notice",
+          "severity": "info",
+          "basis": "pattern",
+          "location": "gradio_canny2image.py",
+          "detail": "pattern scan of source text \u2014 not binary analysis; absence of findings is absence of these patterns only"
+        }
+      ],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 1
+      },
+      "verdict": "pass",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    },
+    {
+      "file": "work/brain-library-review/quarantine/ronininc/kingmaker-brain-library/README.md",
+      "format": "scripture-armor-scan/1",
+      "target_sha256": "2d88bf1c2f230405a1ea6d0ac01701aba2f95b8df81e7e81c263b18439e5ec42",
+      "target_class": "data",
+      "engine": {
+        "name": "none",
+        "version": "none",
+        "rules": "scan-rules/1"
+      },
+      "started": "2026-11-04T03:49:03.982Z",
+      "duration_ms": 0,
+      "analysis_confidence": "full",
+      "findings": [],
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "verdict": "not-applicable",
+      "risk": {
+        "score": 0,
+        "tier": 0,
+        "drivers": []
+      },
+      "override": null
+    }
+  ],
+  "evidence_projection": {
+    "kind": "portable findings without upstream source excerpts",
+    "original_report_sha256": "cf14111e70a246b2c2af246c270929b78cbe3d7f84b3381b193c1b92f7e44afc",
+    "source_excerpts": "Retained in the local review quarantine; findings, severity, file locations and source fingerprints are preserved."
+  }
+}

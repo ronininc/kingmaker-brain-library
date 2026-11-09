@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kingmaker source references, distinct from weights",
+  "type": "object",
+  "required": [
+    "format",
+    "artifact_kind",
+    "weights_catalog",
+    "limitations",
+    "entries"
+  ],
+  "properties": {
+    "format": {
+      "const": "kingmaker-source-references/1"
+    },
+    "artifact_kind": {
+      "const": "source-reference-catalog"
+    },
+    "weights_catalog": {
+      "const": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "requested_repository",
+          "canonical_repository",
+          "commit",
+          "status",
+          "review_status",
+          "install_allowed",
+          "code_license",
+          "model_license",
+          "hardware",
+          "reviewed_files",
+          "findings",
+          "source_kind",
+          "license_classification",
+          "runtime_tested",
+          "weights_downloaded"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "requested_repository": {
+            "type": "string"
+          },
+          "canonical_repository": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "commit": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "status": {
+            "enum": [
+              "QUARANTINED",
+              "BLOCKED"
+            ]
+          },
+          "review_status": {
+            "enum": [
+              "REVIEWED",
+              "BLOCKED"
+            ]
+          },
+          "install_allowed": {
+            "const": false
+          },
+          "code_license": {
+            "type": "string"
+          },
+          "model_license": {
+            "type": "string"
+          },
+          "hardware": {
+            "type": "string"
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reviewed_files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "path",
+                "sha256",
+                "git_blob_sha1",
+                "url",
+                "review_mode"
+              ]
+            }
+          },
+          "source_kind": {
+            "enum": [
+              "github",
+              "unresolved"
+            ]
+          },
+          "license_classification": {
+            "type": "object",
+            "required": [
+              "code",
+              "model"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "enum": [
+                  "identified",
+                  "unknown"
+                ]
+              },
+              "model": {
+                "enum": [
+                  "separate-terms-unreviewed",
+                  "unknown"
+                ]
+              }
+            }
+          },
+          "runtime_tested": {
+            "const": false
+          },
+          "weights_downloaded": {
+            "const": false
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "BLOCKED"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "commit": {
+                  "type": "null"
+                },
+                "reviewed_files": {
+                  "maxItems": 0
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
