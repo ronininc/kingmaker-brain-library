@@ -1,0 +1,585 @@
+{
+  "format": "kingmaker-source-references/1",
+  "reviewed_at_utc": "2026-11-04",
+  "library_base_commit": "00e651e800e903d564c9a47895f65d676ce06df0",
+  "artifact_kind": "source-reference-catalog",
+  "weights_catalog": false,
+  "limitations": [
+    "Passive bounded review; no upstream execution/install",
+    "No weights/native binaries downloaded",
+    "REVIEWED describes scope, never approval to run",
+    "Static scan is evidence only, not proof safe or vulnerability absence",
+    "Source references only; no release or installed skill activation"
+  ],
+  "armor_summary": {
+    "scanned": 33,
+    "code": 17,
+    "data": 16,
+    "needs_owner": 1,
+    "notes": 3,
+    "verdict": "needs-owner"
+  },
+  "entries": [
+    {
+      "id": "harry0703--moneyprinterturbo",
+      "requested_repository": "harry0703/MoneyPrinterTurbo",
+      "canonical_repository": "harry0703/MoneyPrinterTurbo",
+      "github_id": "770153867",
+      "commit": "c8dbf96e9dfee43b30f7c3f440175d6bd4de61de",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "MIT",
+      "model_license": "Provider/model-specific; not covered by repository MIT license",
+      "hardware": "README recommends 8 GB RAM and GPU optional. CPU video assembly plausible on Mac 8 GB; not tested. Optional Whisper and remote providers add memory/network/cost requirements.",
+      "findings": [
+        "HIGH config.example.toml:10-12,43-52 and app/asgi.py:28-35,288-303: API example binds 0.0.0.0 and key is empty. /tasks artifacts follow optional key auth. Loopback and auth needed before exposure.",
+        "MEDIUM app/services/llm.py:575-633: Claude CLI subprocess uses argv, tool disabling, temporary cwd and timeout in inspected path. Other providers/OAuth helpers remain unreviewed. config.example.toml documents credential storage/auth and possible prompt logging.",
+        "MEDIUM requirements.txt delegates primary deps to pyproject.toml/uv.lock (not retrieved). README-en.md:545-589 documents automatic Whisper/FFmpeg downloads. Installers, media services, path controls and stock music rights remain unreviewed."
+      ],
+      "tree_blob_count": 472,
+      "tree_truncated": false,
+      "reviewed_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "3b409c921f64304a971ca0a0e595c5bb459ac903",
+          "sha256": "87dd19b6a0779e14a91c1b06423ef251df37e89666160c031130a26bae68c229",
+          "bytes": 1061,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/LICENSE"
+        },
+        {
+          "path": "README-en.md",
+          "git_blob_sha1": "38c86e6f2981b29ac42aa1ab44acdc8937183a22",
+          "sha256": "8dd6fb0e47120b2d7fd89818c56551ccb07bd3f60cde5bc6861cf4e87b3b607a",
+          "bytes": 42639,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/README-en.md"
+        },
+        {
+          "path": "app/asgi.py",
+          "git_blob_sha1": "948bfee63485be2bf42508a51983dc952163d8ba",
+          "sha256": "9b741b336f605f7159d519d9bbc9b33bf48337039feaa25ac644bc1b02821760",
+          "bytes": 13203,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/app/asgi.py"
+        },
+        {
+          "path": "app/services/llm.py",
+          "git_blob_sha1": "7c4d670aea553f7cd06d8161282c01d60ec491e3",
+          "sha256": "8cb34305fa563ddfe9bd01b70648680c38bd872c7fbdc3470645e4fa64cf84cc",
+          "bytes": 61339,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/app/services/llm.py"
+        },
+        {
+          "path": "config.example.toml",
+          "git_blob_sha1": "506b37ae22ecba6aed67a5105f9f11ed38f8f566",
+          "sha256": "6eadd4e7002443c992d62cde74d19a8bf20fe1a69a10930bd65ac5fe083af61c",
+          "bytes": 37332,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/config.example.toml"
+        },
+        {
+          "path": "docker-compose.yml",
+          "git_blob_sha1": "97f501ef3e5c6c9780cfd6705e4623413b9bb5e3",
+          "sha256": "0f0f2c6b47150974fece34eb6b83eb384695b07d875eb7fc7236ee7a99c71d7e",
+          "bytes": 817,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/docker-compose.yml"
+        },
+        {
+          "path": "main.py",
+          "git_blob_sha1": "af7de2cc7c23a37effdd5b4912e5edab984a42b4",
+          "sha256": "b28cbb202c7cb4c972e1fc702f8315c32de57c57e130b4e4d12cfc81d8061854",
+          "bytes": 566,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/main.py"
+        },
+        {
+          "path": "requirements.txt",
+          "git_blob_sha1": "126440dbf013b10e0266e7b49023bff3411b885e",
+          "sha256": "d19ab95b30689d9da8c693646e84bd6c002f1771ee7f8432d49bc65dcaa89f6b",
+          "bytes": 898,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/c8dbf96e9dfee43b30f7c3f440175d6bd4de61de/requirements.txt"
+        }
+      ],
+      "remaining": "All files outside listed scope, transitive dependencies, installers, native binaries, model cards/checkpoints, runtime acceptance.",
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "3dtopia--threefiner",
+      "requested_repository": "3DTopia/threefiner",
+      "canonical_repository": "3DTopia/threefiner",
+      "github_id": "745311468",
+      "commit": "6c34f089e61a5b53718ff8a38be2fc74687444f2",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "Apache-2.0 in LICENSE; setup.py incorrectly declares MIT",
+      "model_license": "Stable Diffusion and DeepFloyd terms separate; README requires DeepFloyd acceptance. Model cards not fetched.",
+      "hardware": "README requires CUDA extensions tiny-cuda-nn and nvdiffrast. CPU fallback in UI does not establish working CPU/MPS path. Mac 8 GB unverified/unsupported by documented dependency path.",
+      "findings": [
+        "HIGH gradio_app.py:87: explicit all-interface bind and public share=True, no auth argument. Do not launch unchanged.",
+        "MEDIUM gradio_app.py:13-14,45-67: shared fixed output filenames and global mutable config/model. Mesh parser, concurrency isolation, quota and output cleanup need review.",
+        "MEDIUM LICENSE vs setup.py:14,59 conflict. README uses unpinned Git dependency installs and gated models; retain actual Apache text and do not relicense based on metadata."
+      ],
+      "tree_blob_count": 36,
+      "tree_truncated": false,
+      "reviewed_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/3DTopia/threefiner/blob/6c34f089e61a5b53718ff8a38be2fc74687444f2/LICENSE"
+        },
+        {
+          "path": "gradio_app.py",
+          "git_blob_sha1": "9a2cecac39da9112437e9d4ac54084e94b093a35",
+          "sha256": "edb4cb9a8b323c0e26b3080ab76e25604545536aa995ab6958f5da6b2a0e3541",
+          "bytes": 2689,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/3DTopia/threefiner/blob/6c34f089e61a5b53718ff8a38be2fc74687444f2/gradio_app.py"
+        },
+        {
+          "path": "readme.md",
+          "git_blob_sha1": "c13f3f7fcde2638dd4ec8fc3f44b648142231d36",
+          "sha256": "b66a3d263f2dc6fe884d2030f4650010ac23cdfa5881536d34e6986ae39dd1ef",
+          "bytes": 4803,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/3DTopia/threefiner/blob/6c34f089e61a5b53718ff8a38be2fc74687444f2/readme.md"
+        },
+        {
+          "path": "setup.py",
+          "git_blob_sha1": "0051ec2f7df8c9aee22197ceeb771c42bca7e3fe",
+          "sha256": "2071fa63945d88c9970c84e1521b9efd25f903fb36db2e910b6272f73f569af6",
+          "bytes": 1359,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/3DTopia/threefiner/blob/6c34f089e61a5b53718ff8a38be2fc74687444f2/setup.py"
+        }
+      ],
+      "remaining": "All files outside listed scope, transitive dependencies, installers, native binaries, model cards/checkpoints, runtime acceptance.",
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "microsoft--trellis",
+      "requested_repository": "Microsoft/TRELLIS",
+      "canonical_repository": "microsoft/TRELLIS",
+      "github_id": "897148306",
+      "commit": "193e0502b5cb3eb5997ec457d5340e95d09b158e",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "MIT majority; README identifies separately licensed diffoctreerast and modified Flexicubes",
+      "model_license": "README states TRELLIS models MIT; individual model cards, submodules and third-party weights not reviewed.",
+      "hardware": "README: Linux tested; NVIDIA >=16 GB VRAM and CUDA compilation required. Mac 8 GB cannot satisfy upstream documented route.",
+      "findings": [
+        "HIGH setup.sh:2-4: shell eval of getopt output, Scripture Armor src-shell-eval owner gate. Review finding does not establish maliciousness; installer was not run.",
+        "MEDIUM setup.sh:110-259: downloads/clones/builds multiple dependencies, many without immutable commit/hash pins. Native binaries and dependency code unreviewed.",
+        "MEDIUM app.py:401-403 fetches named model and moves to CUDA; default Gradio launch has no explicit auth. Bind defaults depend on installed Gradio/config. Model loader internals not reviewed."
+      ],
+      "tree_blob_count": 207,
+      "tree_truncated": false,
+      "reviewed_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "9e841e7a26e4eb057b24511e7b92d42b257a80e5",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "bytes": 1141,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/microsoft/TRELLIS/blob/193e0502b5cb3eb5997ec457d5340e95d09b158e/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha1": "052d6261d5a0812e28f0834cd7d165a2a81078ac",
+          "sha256": "675a1bab7837d22972a776dec8e2a2eb01f9211bd40b4c57112a8335ccb9ec3e",
+          "bytes": 22007,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/microsoft/TRELLIS/blob/193e0502b5cb3eb5997ec457d5340e95d09b158e/README.md"
+        },
+        {
+          "path": "app.py",
+          "git_blob_sha1": "bd859467b6d396eb212160f7588b7865c96edb44",
+          "sha256": "7f1e8c7bcd672615f6f53170d1e4c44cc349db03397671fc054678e8b917db7e",
+          "bytes": 15007,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/microsoft/TRELLIS/blob/193e0502b5cb3eb5997ec457d5340e95d09b158e/app.py"
+        },
+        {
+          "path": "setup.sh",
+          "git_blob_sha1": "98d3178787e1318eb686a74f3f2f103378354ff9",
+          "sha256": "e536f1152eb8243dc59d818d3db9eddc1818486a1c4823657331165fbd2ca553",
+          "bytes": 11579,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/microsoft/TRELLIS/blob/193e0502b5cb3eb5997ec457d5340e95d09b158e/setup.sh"
+        }
+      ],
+      "remaining": "All files outside listed scope, transitive dependencies, installers, native binaries, model cards/checkpoints, runtime acceptance.",
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "tencent--hunyuan3d-2",
+      "requested_repository": "Tencent/Hunyuan3D-2",
+      "canonical_repository": "Tencent-Hunyuan/Hunyuan3D-2",
+      "github_id": "919835586",
+      "commit": "f8db63096c8282cb27354314d896feba5ba6ff8a",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "Tencent Hunyuan 3D 2.0 Community License in LICENSE; source headers still say non-commercial",
+      "model_license": "Custom Community License covers model/code works; territory/use/distribution restrictions. Individual model cards not fetched.",
+      "hardware": "README: 6 GB VRAM shape, 16 GB shape+texture. CUDA default and native rasterizers; 8 GB Mac unified memory is not equivalent. No Mac runtime verified.",
+      "findings": [
+        "HIGH api_server.py:232-243,246-251,275-283,302: all-interface default, wildcard CORS with credentials, no auth visible in reviewed handlers. /send starts a thread per request; configured semaphore is not acquired in inspected handlers. Need auth and bounded work queue.",
+        "MEDIUM api_server.py:142-143,189-225,287-296: processes caller base64 image/mesh, output format and generation parameters. Validate schema, size/format, job IDs and canonical paths; no live probes/reproductions attempted.",
+        "HIGH LICENSE:1-4,17-29 excludes EU/UK/South Korea and imposes use/distribution conditions. api_server.py/setup.py headers use different license name. Owner/legal reconciliation before redistribution; not MIT."
+      ],
+      "tree_blob_count": 226,
+      "tree_truncated": false,
+      "reviewed_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "a37e08f3a2967aa04fd6b6b514ba9b4a75c836c2",
+          "sha256": "94259df223918a5733677965c1bfe1774a2dba25042d9c3b47a3418ea6c1f324",
+          "bytes": 17829,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/f8db63096c8282cb27354314d896feba5ba6ff8a/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha1": "91de822eee09281220e8608757f777f7548a083a",
+          "sha256": "edc4d006b977c8e28a0d3135ffc22b0dcad8e8dcb31fc9152c906eb21e29a886",
+          "bytes": 18798,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/f8db63096c8282cb27354314d896feba5ba6ff8a/README.md"
+        },
+        {
+          "path": "api_server.py",
+          "git_blob_sha1": "dd2895bf04d64203a98a2c8e3b7684bd5d34e735",
+          "sha256": "bf08d183f8e7715171c85da1c76b313ef41fd30d75d689796d08a25fc55f9373",
+          "bytes": 11066,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/f8db63096c8282cb27354314d896feba5ba6ff8a/api_server.py"
+        },
+        {
+          "path": "requirements.txt",
+          "git_blob_sha1": "abdab84e043a82dc588767e52e925971dd183d4f",
+          "sha256": "b09104f55ee2f22438b2944b164125e88a0366a3434d703aa3f33115e1b21632",
+          "bytes": 387,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/f8db63096c8282cb27354314d896feba5ba6ff8a/requirements.txt"
+        },
+        {
+          "path": "setup.py",
+          "git_blob_sha1": "5339da1a3b0f83050b02d0258e1ae6e5593b2fb4",
+          "sha256": "2823bb49411646de1da85a1b3b16152690a66c5f376947adb7f68d3d6b2755ad",
+          "bytes": 1625,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/f8db63096c8282cb27354314d896feba5ba6ff8a/setup.py"
+        }
+      ],
+      "remaining": "All files outside listed scope, transitive dependencies, installers, native binaries, model cards/checkpoints, runtime acceptance.",
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "vast-ai-research--triposr",
+      "requested_repository": "VAST-AI-Research/TripoSR",
+      "canonical_repository": "VAST-AI-Research/TripoSR",
+      "github_id": "754064451",
+      "commit": "107cefdc244c39106fa830359024f6a2f1c78871",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "MIT",
+      "model_license": "README explicitly states code and pretrained models MIT; individual Hugging Face files not fetched.",
+      "hardware": "README default ~6 GB VRAM. run.py/Gradio have CPU fallback, a candidate for separate benchmarking, not 8 GB Mac approval; MPS not established.",
+      "findings": [
+        "MEDIUM tsr/system.py:52-94: downloads config/checkpoint from Hugging Face without revision in inspected loader, calls torch.load and config-selected classes. Pin/verify config/weights and review class importer before execution.",
+        "MEDIUM gradio_app.py:174-185 auth optional; --listen exposes interfaces and --share enables tunnel, both opt-in. Keep adapters local.",
+        "MEDIUM requirements.txt:4 unpinned Git torchmcubes native dependency. gradio_app.py:62-73 creates delete=False mesh tempfiles. Build chain and cleanup/quotas remain review gates."
+      ],
+      "tree_blob_count": 35,
+      "tree_truncated": false,
+      "reviewed_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "6c440ca1ef32cedcc2257b99953add129199ed26",
+          "sha256": "ade0a66629bdd7e01e46b3296b3851cff0fd27989bca53da470ad6e96ed620fb",
+          "bytes": 1080,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha1": "b52bfb251b850f13a8b8565b52914f2bc9ede2e3",
+          "sha256": "ed40f078c5e451c58eae716187e0128f0ce8575e467aab2440b4ed9c75e490b9",
+          "bytes": 5419,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/README.md"
+        },
+        {
+          "path": "gradio_app.py",
+          "git_blob_sha1": "22092da32381673811cf8965547898c5b1a86951",
+          "sha256": "966639162b0e54b8d02748968e77c90aec38bbc123aa5db2d1d81eb92fda9f80",
+          "bytes": 7147,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/gradio_app.py"
+        },
+        {
+          "path": "requirements.txt",
+          "git_blob_sha1": "c905bdb3540890d0af5382f984f48ef74d9a270c",
+          "sha256": "741408247598c63e9f08cdb5f6fc753d78ac9185bb961cbe7ba8c5c0132aae48",
+          "bytes": 203,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/requirements.txt"
+        },
+        {
+          "path": "run.py",
+          "git_blob_sha1": "1150529c1b9525c88e87dba44fa649129b1d2d95",
+          "sha256": "bc1c124b3439f8ceb00ebd441848487ae7650af71053a80b266ae5db15784282",
+          "bytes": 6292,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/run.py"
+        },
+        {
+          "path": "tsr/system.py",
+          "git_blob_sha1": "bcdb69b2e5c85b3c0ffebd7ff82fc4fe7b3d543e",
+          "sha256": "7aec93e421394ad7c746b6d63a0189532b57b26af9a199fc75ac3bb7c993c94f",
+          "bytes": 6608,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/tsr/system.py"
+        }
+      ],
+      "remaining": "All files outside listed scope, transitive dependencies, installers, native binaries, model cards/checkpoints, runtime acceptance.",
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "lllyasviel--controlnet",
+      "requested_repository": "lllyasviel/ControlNet",
+      "canonical_repository": "lllyasviel/ControlNet",
+      "github_id": "595893961",
+      "commit": "ed85cd1e25a5ed592f7d8178495b4483de0331bf",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "Apache-2.0 root; annotators have separate licenses not covered in this pass",
+      "model_license": "Unverified; base Stable Diffusion, ControlNet and annotator checkpoints require individual terms.",
+      "hardware": "README 8 GB low-VRAM note refers to GPUs. environment.yaml is CUDA11.3/PyTorch1.12.1. No equivalent Mac8GB/MPS claim established.",
+      "findings": [
+        "HIGH gradio_canny2image.py final line: explicit 0.0.0.0 bind, no auth argument. Adapt before hosting.",
+        "MEDIUM cldm/model.py:12-26 uses torch.load for non-safetensors and YAML-instantiated model class. Checkpoint/config provenance is an execution boundary.",
+        "MEDIUM environment.yaml old Python/PyTorch/Gradio pins plus some loose dependencies. No current advisory or transitive dependency audit; old pins do not prove safety."
+      ],
+      "tree_blob_count": 509,
+      "tree_truncated": false,
+      "reviewed_files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/lllyasviel/ControlNet/blob/ed85cd1e25a5ed592f7d8178495b4483de0331bf/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha1": "7e240b1821386750d92e5180b130a802d8e956ce",
+          "sha256": "c2cc1b1620119b50bcce16903a83b50366cdba7600732720432aad6eb4d55e39",
+          "bytes": 16623,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/lllyasviel/ControlNet/blob/ed85cd1e25a5ed592f7d8178495b4483de0331bf/README.md"
+        },
+        {
+          "path": "cldm/model.py",
+          "git_blob_sha1": "fed3c31ac145b78907c7f771d1d8db6fb32d92ed",
+          "sha256": "d6505ff713cded0b7db34f403d7684df08d07574213ce16e7c89585f6453a0ca",
+          "bytes": 836,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/lllyasviel/ControlNet/blob/ed85cd1e25a5ed592f7d8178495b4483de0331bf/cldm/model.py"
+        },
+        {
+          "path": "environment.yaml",
+          "git_blob_sha1": "91463f0fb17145d7649e298819811ac9a21d6b93",
+          "sha256": "c31c748f0347d9c2e201ad38206bd75f6a55f1064ea4189efc072e32d119a3e0",
+          "bytes": 810,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/lllyasviel/ControlNet/blob/ed85cd1e25a5ed592f7d8178495b4483de0331bf/environment.yaml"
+        },
+        {
+          "path": "gradio_canny2image.py",
+          "git_blob_sha1": "9866cac5b35925576c20ef4b9ee8b1b1cca235b2",
+          "sha256": "773217407b1ddc9ec9f52ea5179f35303aee53d594c7807c422ec1bf4a87eeda",
+          "bytes": 4874,
+          "review_mode": "Selected behavior/license/requirements passages plus lexical scan; not exhaustive line-by-line audit",
+          "url": "https://github.com/lllyasviel/ControlNet/blob/ed85cd1e25a5ed592f7d8178495b4483de0331bf/gradio_canny2image.py"
+        }
+      ],
+      "remaining": "All files outside listed scope, transitive dependencies, installers, native binaries, model cards/checkpoints, runtime acceptance.",
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "va3id--faithc",
+      "requested_repository": "va3id/FaithC",
+      "canonical_repository": null,
+      "github_id": null,
+      "commit": null,
+      "status": "BLOCKED",
+      "review_status": "BLOCKED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "unknown",
+      "model_license": "unknown",
+      "hardware": "unknown",
+      "findings": [
+        "Exact primary GitHub API https://api.github.com/repos/va3id/FaithC returned 404; absent/renamed/private/inaccessible cannot be distinguished. Need corrected owner URL/access; no substitute guessed."
+      ],
+      "reviewed_files": [],
+      "remaining": "Resolve exact identity, pin, license and source review.",
+      "source_kind": "unresolved",
+      "license_classification": {
+        "code": "unknown",
+        "model": "unknown"
+      }
+    },
+    {
+      "id": "jasonyzg--meshanything",
+      "requested_repository": "jasonyzg/MeshAnything",
+      "canonical_repository": null,
+      "github_id": null,
+      "commit": null,
+      "status": "BLOCKED",
+      "review_status": "BLOCKED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "unknown",
+      "model_license": "unknown",
+      "hardware": "unknown",
+      "findings": [
+        "Exact primary GitHub API https://api.github.com/repos/jasonyzg/MeshAnything returned 404; absent/renamed/private/inaccessible cannot be distinguished. Need corrected owner URL/access; no substitute guessed."
+      ],
+      "reviewed_files": [],
+      "remaining": "Resolve exact identity, pin, license and source review.",
+      "source_kind": "unresolved",
+      "license_classification": {
+        "code": "unknown",
+        "model": "unknown"
+      }
+    },
+    {
+      "id": "sgx6--ultratex",
+      "requested_repository": "SgX6/UltraTex",
+      "canonical_repository": null,
+      "github_id": null,
+      "commit": null,
+      "status": "BLOCKED",
+      "review_status": "BLOCKED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "unknown",
+      "model_license": "unknown",
+      "hardware": "unknown",
+      "findings": [
+        "Exact primary GitHub API https://api.github.com/repos/SgX6/UltraTex returned 404; absent/renamed/private/inaccessible cannot be distinguished. Need corrected owner URL/access; no substitute guessed."
+      ],
+      "reviewed_files": [],
+      "remaining": "Resolve exact identity, pin, license and source review.",
+      "source_kind": "unresolved",
+      "license_classification": {
+        "code": "unknown",
+        "model": "unknown"
+      }
+    },
+    {
+      "id": "fepegar--blender-server",
+      "requested_repository": "fepegar/blender-server",
+      "canonical_repository": null,
+      "github_id": null,
+      "commit": null,
+      "status": "BLOCKED",
+      "review_status": "BLOCKED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "unknown",
+      "model_license": "unknown",
+      "hardware": "unknown",
+      "findings": [
+        "Exact primary GitHub API https://api.github.com/repos/fepegar/blender-server returned 404; absent/renamed/private/inaccessible cannot be distinguished. Need corrected owner URL/access; no substitute guessed."
+      ],
+      "reviewed_files": [],
+      "remaining": "Resolve exact identity, pin, license and source review.",
+      "source_kind": "unresolved",
+      "license_classification": {
+        "code": "unknown",
+        "model": "unknown"
+      }
+    },
+    {
+      "id": "allaska--blender-gpt",
+      "requested_repository": "AllasKA/Blender-GPT",
+      "canonical_repository": null,
+      "github_id": null,
+      "commit": null,
+      "status": "BLOCKED",
+      "review_status": "BLOCKED",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "weights_downloaded": false,
+      "code_license": "unknown",
+      "model_license": "unknown",
+      "hardware": "unknown",
+      "findings": [
+        "Exact primary GitHub API https://api.github.com/repos/AllasKA/Blender-GPT returned 404; absent/renamed/private/inaccessible cannot be distinguished. Need corrected owner URL/access; no substitute guessed."
+      ],
+      "reviewed_files": [],
+      "remaining": "Resolve exact identity, pin, license and source review.",
+      "source_kind": "unresolved",
+      "license_classification": {
+        "code": "unknown",
+        "model": "unknown"
+      }
+    }
+  ]
+}

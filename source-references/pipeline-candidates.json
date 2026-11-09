@@ -1,0 +1,347 @@
+{
+  "format": "kingmaker-pipeline-candidates/1",
+  "reviewed_at_utc": "2026-11-04",
+  "scope": "Passive source/metadata review only; no install, execution, weight download, cron, paid request or outbound publication",
+  "entries": [
+    {
+      "id": "softcatala--whisper-ctranslate2",
+      "repository": "Softcatala/whisper-ctranslate2",
+      "commit": "78ae8efaca4b8de6fd41ef0f47b789fcdd0e2555",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "code_license": "MIT",
+      "model_license": "Whisper/model conversion terms separate; no weights retrieved",
+      "hardware": "CPU candidate for small quantized models on Mac8GB; unbenchmarked. CTranslate2 native dependency reviewed only by reference.",
+      "findings": [
+        "CLI commandline.py:311-314 defaults word_timestamps false; whisper_ctranslate2.py:136-147 rejects max_words_per_line without True. Pasted command therefore falls short at this pinned source. Remote model downloads and native dependencies not audited."
+      ],
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "2543cd8384803b0436be74347e1cb09e424354f6043433f47096c7cd07ffe90a",
+          "bytes": 7499,
+          "url": "https://github.com/Softcatala/whisper-ctranslate2/blob/78ae8efaca4b8de6fd41ef0f47b789fcdd0e2555/README.md",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "7e05603f8192f65464ddc31c8aa20949b8cdddb1d5054675dd2ae8ceb9517b41",
+          "bytes": 1066,
+          "url": "https://github.com/Softcatala/whisper-ctranslate2/blob/78ae8efaca4b8de6fd41ef0f47b789fcdd0e2555/LICENSE",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        },
+        {
+          "path": "src/whisper_ctranslate2/whisper_ctranslate2.py",
+          "sha256": "62ab94c38ab29eeed19a06cd1a9140c67847979316812c61eea6ebb6259db53f",
+          "bytes": 10586,
+          "url": "https://github.com/Softcatala/whisper-ctranslate2/blob/78ae8efaca4b8de6fd41ef0f47b789fcdd0e2555/src/whisper_ctranslate2/whisper_ctranslate2.py",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        },
+        {
+          "path": "src/whisper_ctranslate2/commandline.py",
+          "sha256": "91d69794c22ec8fbe92347ec4a0ff2fdb7854a15f9eeea829318e930f888a3c6",
+          "bytes": 16308,
+          "url": "https://github.com/Softcatala/whisper-ctranslate2/blob/78ae8efaca4b8de6fd41ef0f47b789fcdd0e2555/src/whisper_ctranslate2/commandline.py",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        }
+      ],
+      "install_allowed": false,
+      "weights_downloaded": false,
+      "runtime_tested": false,
+      "pypi": {
+        "name": "whisper-ctranslate2",
+        "version_at_review": "0.5.8",
+        "url": "https://pypi.org/project/whisper-ctranslate2/",
+        "metadata_url": "https://pypi.org/pypi/whisper-ctranslate2/json",
+        "license_metadata": "MIT",
+        "project_urls": {
+          "Homepage": "https://github.com/Softcatala/whisper-ctranslate2"
+        },
+        "release_artifact_hashes": [
+          {
+            "filename": "whisper_ctranslate2-0.5.8-py3-none-any.whl",
+            "sha256": "34857f88e79ebd7769f778242980eebd5dd3c92ae5565821a9fc8965286e51d9"
+          },
+          {
+            "filename": "whisper_ctranslate2-0.5.8.tar.gz",
+            "sha256": "0c074ef50f3d345ab38e7199df6764c7d3eb1f082d715e0ea3a80b2e39458b95"
+          }
+        ],
+        "artifact_downloaded": false,
+        "release_source_equivalence": "Repository HEAD pin and PyPI release version are distinct; equivalence NOT verified."
+      },
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "cdown--srt",
+      "repository": "cdown/srt",
+      "commit": "ff96458d16e8e9f28315687fbed2bb23b013c6b0",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "code_license": "MIT",
+      "model_license": "Not a model",
+      "hardware": "Small Python formatting library; no runtime benchmark",
+      "findings": [
+        "Third-party PyPI package, not stdlib. Pasted script does not import it, so installation is unnecessary for that script. Only README/license metadata reviewed; implementation/dependencies remain unreviewed."
+      ],
+      "reviewed_files": [
+        {
+          "path": "README.rst",
+          "sha256": "efa2881419ae5387a820aeeafcb1b2186a0fd6a8332c5c79b1ec00b29d0de690",
+          "bytes": 5966,
+          "url": "https://github.com/cdown/srt/blob/ff96458d16e8e9f28315687fbed2bb23b013c6b0/README.rst",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "23fc2fec09b621a22699a1fa8685b5b21c64fde7f9385ca6e5f2f29d0a4bc776",
+          "bytes": 1085,
+          "url": "https://github.com/cdown/srt/blob/ff96458d16e8e9f28315687fbed2bb23b013c6b0/LICENSE",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        }
+      ],
+      "install_allowed": false,
+      "weights_downloaded": false,
+      "runtime_tested": false,
+      "pypi": {
+        "name": "srt",
+        "version_at_review": "3.5.3",
+        "url": "https://pypi.org/project/srt/",
+        "metadata_url": "https://pypi.org/pypi/srt/json",
+        "license_metadata": "MIT",
+        "project_urls": {
+          "Homepage": "https://github.com/cdown/srt"
+        },
+        "release_artifact_hashes": [
+          {
+            "filename": "srt-3.5.3.tar.gz",
+            "sha256": "4884315043a4f0740fd1f878ed6caa376ac06d70e135f306a6dc44632eed0cc0"
+          }
+        ],
+        "artifact_downloaded": false,
+        "release_source_equivalence": "Repository HEAD pin and PyPI release version are distinct; equivalence NOT verified."
+      },
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "rany2--edge-tts",
+      "repository": "rany2/edge-tts",
+      "commit": "bd44c1d1aaebdc1db7f47456ee12431b42ec7cac",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "code_license": "LGPLv3 except srt_composer.py MIT",
+      "model_license": "Online service terms separate",
+      "hardware": "CPU client; internet required, not offline",
+      "findings": [
+        "README explicitly describes Microsoft Edge online TTS. Narration leaves machine. No network call performed. Service authorization, availability, traffic and local cache behavior require review before use."
+      ],
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "7f8b8d1941037c3bc341deae0bb148de7a95d9b41a47dc89c90093d3cc61a0e9",
+          "bytes": 5189,
+          "url": "https://github.com/rany2/edge-tts/blob/bd44c1d1aaebdc1db7f47456ee12431b42ec7cac/README.md",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "3613045a46a5bce847f80eadbbf013e4260ef19d728ffd061d61e792689ec3a8",
+          "bytes": 9041,
+          "url": "https://github.com/rany2/edge-tts/blob/bd44c1d1aaebdc1db7f47456ee12431b42ec7cac/LICENSE",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        }
+      ],
+      "install_allowed": false,
+      "weights_downloaded": false,
+      "runtime_tested": false,
+      "pypi": {
+        "name": "edge-tts",
+        "version_at_review": "7.3.1",
+        "url": "https://pypi.org/project/edge-tts/",
+        "metadata_url": "https://pypi.org/pypi/edge-tts/json",
+        "license_metadata": null,
+        "project_urls": {
+          "Bug Tracker": "https://github.com/rany2/edge-tts/issues",
+          "Homepage": "https://github.com/rany2/edge-tts"
+        },
+        "release_artifact_hashes": [
+          {
+            "filename": "edge_tts-7.3.1-py3-none-any.whl",
+            "sha256": "2a3c79d6235a7a736d681233823ce5492e829b43eb47beae49aa181237a8f9a4"
+          },
+          {
+            "filename": "edge_tts-7.3.1.tar.gz",
+            "sha256": "ee1fabf911b9ea83b38ae93aee5619ee41eaf0b109fef6e65d797dc4ebf1f20f"
+          }
+        ],
+        "artifact_downloaded": false,
+        "release_source_equivalence": "Repository HEAD pin and PyPI release version are distinct; equivalence NOT verified."
+      },
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "openai--whisper",
+      "repository": "openai/whisper",
+      "commit": "86098128c0b4f24f0e2aa2994de830614b474227",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "code_license": "MIT",
+      "model_license": "README states code and model weights MIT",
+      "hardware": "README tiny/base ~1GB VRAM; these are candidates, not Mac8GB timing or RAM measurements. Larger models do not fit this budget reliably.",
+      "findings": [
+        "Original Whisper is distinct from CTranslate2 wrapper. whisper/transcribe.py inspected selectively for CLI handling. Local inference still needs pre-obtained approved model files; no download/inference performed."
+      ],
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "38c180c2a8d8ba628a3e131ad42bf06c8a51bb681efb30fbe28d5a0f4b65f288",
+          "bytes": 8246,
+          "url": "https://github.com/openai/whisper/blob/86098128c0b4f24f0e2aa2994de830614b474227/README.md",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d",
+          "bytes": 1063,
+          "url": "https://github.com/openai/whisper/blob/86098128c0b4f24f0e2aa2994de830614b474227/LICENSE",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        },
+        {
+          "path": "whisper/transcribe.py",
+          "sha256": "176f5ab30e961bec2a7872f5701a1f5bf3cbfc77946e50512f0f0cf00a1ceacf",
+          "bytes": 30375,
+          "url": "https://github.com/openai/whisper/blob/86098128c0b4f24f0e2aa2994de830614b474227/whisper/transcribe.py",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        }
+      ],
+      "install_allowed": false,
+      "weights_downloaded": false,
+      "runtime_tested": false,
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "ffmpeg--ffmpeg",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "39ccb3ca120c0815c62c7f145a1aa1354f335680",
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "code_license": "LGPL2.1+ by default; optional components/build flags switch GPL/version3/nonfree conditions",
+      "model_license": "Not a model; codec/patent/font terms separate",
+      "hardware": "Still-image encode is CPU-capable in principle; actual local binary/build filters/codecs not inspected",
+      "findings": [
+        "Only LICENSE.md reviewed. Pasted pipeline needs subtitles/libass, libx264, fonts, path/filter escaping, explicit vertical dimensions and output checks; no FFmpeg invocation or binary scan performed."
+      ],
+      "reviewed_files": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "e6dc72d5665a1ebd6dcc841de59278dad4ca77ecc47b03f1064a55c3e9ea8bb8",
+          "bytes": 4352,
+          "url": "https://github.com/FFmpeg/FFmpeg/blob/39ccb3ca120c0815c62c7f145a1aa1354f335680/LICENSE.md",
+          "review_mode": "Selected requirements/license/behavior passages; pinned raw GitHub source, not full repository audit"
+        }
+      ],
+      "install_allowed": false,
+      "weights_downloaded": false,
+      "runtime_tested": false,
+      "source_kind": "github",
+      "license_classification": {
+        "code": "identified",
+        "model": "separate-terms-unreviewed"
+      }
+    },
+    {
+      "id": "agent-reach",
+      "repository": null,
+      "commit": null,
+      "status": "BLOCKED",
+      "review_status": "BLOCKED",
+      "install_allowed": false,
+      "code_license": "unknown",
+      "model_license": "unknown",
+      "hardware": "unknown",
+      "reviewed_files": [],
+      "findings": [
+        "No exact repository/package URL supplied or verified; no substitution guessed. Pasted module/CLI invocation is unproven."
+      ],
+      "source_kind": "unresolved",
+      "license_classification": {
+        "code": "unknown",
+        "model": "unknown"
+      },
+      "runtime_tested": false,
+      "weights_downloaded": false
+    },
+    {
+      "id": "flux-local",
+      "repository": null,
+      "commit": null,
+      "status": "BLOCKED",
+      "review_status": "BLOCKED",
+      "install_allowed": false,
+      "code_license": "unknown",
+      "model_license": "unknown",
+      "hardware": "unknown",
+      "reviewed_files": [],
+      "findings": [
+        "No exact repository/package URL supplied or verified; no substitution guessed. Pasted module/CLI invocation is unproven."
+      ],
+      "source_kind": "unresolved",
+      "license_classification": {
+        "code": "unknown",
+        "model": "unknown"
+      },
+      "runtime_tested": false,
+      "weights_downloaded": false
+    },
+    {
+      "id": "fully-mapped-aggregator-pasted",
+      "repository": null,
+      "commit": null,
+      "status": "QUARANTINED",
+      "review_status": "REVIEWED",
+      "code_license": "Not supplied; pasted text does not establish upstream redistribution rights",
+      "model_license": "Per provider/engine",
+      "hardware": "Not measured",
+      "install_allowed": false,
+      "runtime_tested": false,
+      "reviewed_files": [
+        {
+          "path": "fully_mapped_aggregator.py",
+          "sha256": "cb286c5a80c87a3c9e7955d74cbfb4c97f382effc165f5e89d53b9801a650a78",
+          "bytes": 4029,
+          "review_mode": "Entire pasted script read; inert extraction scanned, never executed"
+        }
+      ],
+      "findings": [
+        "HIGH: shell=True string construction incorporates script/prompt/file paths. Replace with validated argv and shell=False in a separately authorized original adaptation.",
+        "Simulated news never consumes raw_trends.json and is not Kingmaker synthesis; no authenticity evidence.",
+        "Unverified agent_reach CLI and flux_local module; edge-tts is online; SRT package not stdlib and unused.",
+        "whisper-ctranslate2 word layout flag missing word_timestamps True at reviewed source.",
+        "ASS force_style alignment table confuses legacy SSA 6/10 with modern 8/5 for top/middle center.",
+        "No vertical resize, libass/font validation, job isolation, timeouts, resource bounds or output validation. Renames/FFmpeg -y can replace artifacts; public cron instructions not authorized."
+      ],
+      "source_kind": "user-paste",
+      "license_classification": {
+        "code": "unknown",
+        "model": "separate-terms-unreviewed"
+      },
+      "weights_downloaded": false
+    }
+  ]
+}
